@@ -1,0 +1,1172 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2026 CHIANG MAI RELAXING TRIP</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Outfit:wght@400;600;700&display=swap"
+    rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            terra: {
+              50: '#fdf8f6',
+              100: '#f2e8e5',
+              200: '#e4d1cb',
+              500: '#c86d51', // Primary Terracotta
+              600: '#b0573c',
+              700: '#8e412a',
+              900: '#4a2013'
+            },
+            warmbg: '#FDFBF7',
+            cardbg: '#FFFFFF',
+            darktext: '#2C221E'
+          },
+          fontFamily: {
+            sans: ['"Noto Sans TC"', '"Outfit"', 'sans-serif'],
+            outfit: ['"Outfit"', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      background-color: #FDFBF7;
+      color: #2C221E;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .hide-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+
+    .hide-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+</head>
+
+<body class="font-sans antialiased pb-24">
+
+  <header class="sticky top-0 z-40 bg-warmbg/90 backdrop-blur-md border-b border-terra-200 px-4 py-3 shadow-sm">
+    <div class="max-w-md mx-auto flex justify-between items-center">
+      <div>
+        <h1 class="text-base font-bold text-darktext leading-tight">2026 CHIANG MAI</h1>
+        <p class="text-[10px] text-gray-500 font-outfit">RELAXING TRIP 09/12 - 09/19</p>
+      </div>
+      <div class="bg-terra-100 px-2.5 py-1 rounded-full border border-terra-200">
+        <span class="text-xs font-bold text-terra-700 font-outfit"><i class="fa-solid fa-plane-arrival mr-1"></i>8
+          Days</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-md mx-auto px-4 pt-4">
+
+    <section id="tab-plan" class="tab-content space-y-4">
+
+      <div class="bg-cardbg rounded-2xl p-4 shadow-sm border border-terra-100 space-y-3">
+        <div class="flex items-center space-x-2 border-b border-gray-100 pb-2">
+          <i class="fa-solid fa-plane text-terra-500"></i>
+          <h2 class="font-bold text-sm text-darktext">航班與住宿資訊</h2>
+        </div>
+        <div class="grid grid-cols-2 gap-2 text-xs">
+          <div class="bg-terra-50 p-2.5 rounded-xl border border-terra-100">
+            <span class="text-terra-600 font-bold block mb-1">去程 09/12</span>
+            <p class="font-semibold">星宇 JX751</p>
+            <p class="text-gray-600">13:05-16:05 桃機T2-清邁</p>
+            <p class="text-gray-600">※12:05 關櫃</p>
+          </div>
+          <div class="bg-terra-50 p-2.5 rounded-xl border border-terra-100">
+            <span class="text-terra-600 font-bold block mb-1">回程 09/19</span>
+            <p class="font-semibold">星宇 JX752</p>
+            <p class="text-gray-600">17:20-22:10 清邁-桃機T2</p>
+            <p class="text-gray-600">※16:20 關櫃</p>
+          </div>
+        </div>
+        <div class="bg-warmbg p-2.5 rounded-xl border border-terra-200/60 text-xs space-y-2">
+          <div>
+            <p><span class="font-bold text-terra-700">09/12 - 09/16 :</span> Baannalin Hometel</p>
+            <a href="https://www.google.com/maps/search/?api=1&query=Baannalin+Hometel+Chiang+Mai" target="_blank"
+              rel="noopener noreferrer"
+              class="block text-[11px] text-gray-500 hover:text-terra-600 transition-colors mt-0.5">
+              <i class="fa-solid fa-location-dot text-terra-500 mr-1"></i>70 Singharat Rd, Tambon Si Phum, Chiang Mai
+              50200
+            </a>
+          </div>
+          <div class="border-t border-terra-100/60 pt-2">
+            <p><span class="font-bold text-terra-700">09/16 - 09/19 :</span> Nimman Bed @9</p>
+            <a href="https://www.google.com/maps/search/?api=1&query=Nimman+Bed+at+9+Chiang+Mai" target="_blank"
+              rel="noopener noreferrer"
+              class="block text-[11px] text-gray-500 hover:text-terra-600 transition-colors mt-0.5">
+              <i class="fa-solid fa-location-dot text-terra-500 mr-1"></i>43 Nimmanahaeminda Rd, Suthep, Chiang Mai
+              50200
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex space-x-2 overflow-x-auto hide-scrollbar py-1" id="date-buttons">
+      </div>
+
+      <div id="daily-schedule-container" class="space-y-4">
+      </div>
+
+    </section>
+
+    <section id="tab-guide" class="tab-content hidden space-y-4">
+
+      <!-- 景點導覽標題 -->
+      <div class="bg-terra-500 text-white rounded-2xl p-4 shadow-sm">
+        <span class="text-xs font-outfit uppercase tracking-widest text-terra-200">Chiang Mai</span>
+        <h2 class="text-xl font-bold mt-0.5">景點導覽 Guide</h2>
+        <p class="text-[11px] text-terra-100 font-outfit mt-1">寺廟 · 市集 · 市場 · 夜市完整介紹</p>
+      </div>
+
+      <!-- 分類標籤 -->
+      <div class="flex space-x-2 overflow-x-auto hide-scrollbar py-1" id="guide-tabs">
+        <button onclick="showGuideCategory('temple')" id="gtab-temple" class="guide-tab shrink-0 px-3 py-1.5 rounded-xl font-outfit text-xs font-bold transition bg-terra-500 text-white shadow-sm"><i class="fa-solid fa-gopuram mr-1"></i>寺廟</button>
+        <button onclick="showGuideCategory('market')" id="gtab-market" class="guide-tab shrink-0 px-3 py-1.5 rounded-xl font-outfit text-xs font-bold transition bg-cardbg text-gray-600 border border-terra-100"><i class="fa-solid fa-store mr-1"></i>市集</button>
+        <button onclick="showGuideCategory('night')" id="gtab-night" class="guide-tab shrink-0 px-3 py-1.5 rounded-xl font-outfit text-xs font-bold transition bg-cardbg text-gray-600 border border-terra-100"><i class="fa-solid fa-moon mr-1"></i>夜市</button>
+        <button onclick="showGuideCategory('nature')" id="gtab-nature" class="guide-tab shrink-0 px-3 py-1.5 rounded-xl font-outfit text-xs font-bold transition bg-cardbg text-gray-600 border border-terra-100"><i class="fa-solid fa-tree mr-1"></i>自然</button>
+      </div>
+
+      <!-- 寺廟 -->
+      <div id="guide-temple" class="guide-category space-y-3">
+        <div class="bg-cardbg rounded-2xl overflow-hidden shadow-sm border border-terra-100">
+          <div class="bg-terra-600 text-white px-4 py-3 flex items-center space-x-2">
+            <i class="fa-solid fa-gopuram text-lg"></i>
+            <div><h3 class="font-bold text-sm">柴迪隆寺</h3><p class="text-[10px] text-terra-200 font-outfit">Wat Chedi Luang</p></div>
+            <a href="https://www.google.com/maps/search/?api=1&query=18.7869693,98.9865804" target="_blank" class="ml-auto text-terra-200 hover:text-white"><i class="fa-solid fa-map-pin"></i></a>
+          </div>
+          <div class="p-4 text-xs leading-relaxed space-y-2 text-darktext">
+            <p>清邁最宏偉的古城寺廟，創建於 14 世紀末，主佛塔曾高達 80 公尺。1545 年大地震後頂端倒塌，形成震撼的殘缺美。著名玉佛（現存曼谷玉佛寺）曾在此供奉 80 餘年。</p>
+            <div class="bg-terra-50 p-2.5 rounded-xl border border-terra-100 space-y-1">
+              <p><i class="fa-solid fa-clock mr-1 text-terra-500"></i><strong>開放時間：</strong>06:00–17:00，每日</p>
+              <p><i class="fa-solid fa-ticket mr-1 text-terra-500"></i><strong>門票：</strong>外國人 40 THB</p>
+              <p><i class="fa-solid fa-shirt mr-1 text-terra-500"></i><strong>穿著：</strong>需蓋肩蓋膝，門口可租借</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-cardbg rounded-2xl overflow-hidden shadow-sm border border-terra-100">
+          <div class="bg-terra-600 text-white px-4 py-3 flex items-center space-x-2">
+            <i class="fa-solid fa-gopuram text-lg"></i>
+            <div><h3 class="font-bold text-sm">帕邢寺</h3><p class="text-[10px] text-terra-200 font-outfit">Wat Phra Singh</p></div>
+            <a href="https://www.google.com/maps/search/?api=1&query=Wat+Phra+Singh+Chiang+Mai" target="_blank" class="ml-auto text-terra-200 hover:text-white"><i class="fa-solid fa-map-pin"></i></a>
+          </div>
+          <div class="p-4 text-xs leading-relaxed space-y-2 text-darktext">
+            <p>清邁最重要的皇家寺廟，供奉「帕邢佛」——清邁人心目中最神聖的佛像。建於 1345 年，建築風格融合蘭那王國典型的蘭那式屋頂，金碧輝煌。每年宋干節（潑水節）遊行皆以此廟為終點。</p>
+            <div class="bg-terra-50 p-2.5 rounded-xl border border-terra-100 space-y-1">
+              <p><i class="fa-solid fa-clock mr-1 text-terra-500"></i><strong>開放時間：</strong>06:00–18:00，每日</p>
+              <p><i class="fa-solid fa-ticket mr-1 text-terra-500"></i><strong>門票：</strong>外國人 50 THB</p>
+              <p><i class="fa-solid fa-location-dot mr-1 text-terra-500"></i><strong>位置：</strong>古城西側，塔佩路附近</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-cardbg rounded-2xl overflow-hidden shadow-sm border border-terra-100">
+          <div class="bg-terra-600 text-white px-4 py-3 flex items-center space-x-2">
+            <i class="fa-solid fa-gopuram text-lg"></i>
+            <div><h3 class="font-bold text-sm">塔佩門</h3><p class="text-[10px] text-terra-200 font-outfit">Tha Phae Gate</p></div>
+            <a href="https://www.google.com/maps/search/?api=1&query=Tha+Phae+Gate+Chiang+Mai" target="_blank" class="ml-auto text-terra-200 hover:text-white"><i class="fa-solid fa-map-pin"></i></a>
+          </div>
+          <div class="p-4 text-xs leading-relaxed space-y-2 text-darktext">
+            <p>清邁古城東側的標誌性城門，建於 13 世紀，是清邁最具代表性的歷史地標之一。廣場前常有街頭表演，也是拍照打卡熱點。每逢節慶有盛大燈飾裝置。</p>
+            <div class="bg-terra-50 p-2.5 rounded-xl border border-terra-100 space-y-1">
+              <p><i class="fa-solid fa-clock mr-1 text-terra-500"></i><strong>開放時間：</strong>全天候開放（免費）</p>
+              <p><i class="fa-solid fa-location-dot mr-1 text-terra-500"></i><strong>交通：</strong>離古城東牆步行 1 分鐘</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-cardbg rounded-2xl overflow-hidden shadow-sm border border-terra-100">
+          <div class="bg-terra-600 text-white px-4 py-3 flex items-center space-x-2">
+            <i class="fa-solid fa-gopuram text-lg"></i>
+            <div><h3 class="font-bold text-sm">羅摩利寺</h3><p class="text-[10px] text-terra-200 font-outfit">Wat Loi Kroh</p></div>
+            <a href="https://www.google.com/maps/search/?api=1&query=18.7960243,98.9825675" target="_blank" class="ml-auto text-terra-200 hover:text-white"><i class="fa-solid fa-map-pin"></i></a>
+          </div>
+          <div class="p-4 text-xs leading-relaxed space-y-2 text-darktext">
+            <p>古城南側小而精緻的蘭那式寺廟，以其精美的木雕裝飾聞名。位於白象夜市旁邊，是遊覽夜市前的必訪亮點。寺廟規模雖小，但雕工精細，氛圍寧靜。</p>
+            <div class="bg-terra-50 p-2.5 rounded-xl border border-terra-100 space-y-1">
+              <p><i class="fa-solid fa-clock mr-1 text-terra-500"></i><strong>最佳時段：</strong>傍晚 17:00–19:00（燈光美）</p>
+              <p><i class="fa-solid fa-ticket mr-1 text-terra-500"></i><strong>門票：</strong>免費</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 市集 -->
+      <div id="guide-market" class="guide-category hidden space-y-3">
+        <div class="bg-cardbg rounded-2xl overflow-hidden shadow-sm border border-terra-100">
+          <div class="bg-emerald-700 text-white px-4 py-3 flex items-center space-x-2">
+            <i class="fa-solid fa-store text-lg"></i>
+            <div><h3 class="font-bold text-sm">真心市集</h3><p class="text-[10px] text-emerald-200 font-outfit">Talat Warorot / Kad Luang</p></div>
+            <a href="https://www.google.com/maps/search/?api=1&query=18.8062295,98.995325" target="_blank" class="ml-auto text-emerald-200 hover:text-white"><i class="fa-solid fa-map-pin"></i></a>
+          </div>
+          <div class="p-4 text-xs leading-relaxed space-y-2 text-darktext">
+            <p>又稱「清邁中央市場」或「嘎魯市場」，清邁最大、最古老的傳統市場。販賣各式蔬果、花卉、乾貨、泰北特產及小吃，是感受在地生活的最佳去處。推薦購買：果乾、泰式調味料、棉花糖、蘭那布料。</p>
+            <div class="bg-emerald-50 p-2.5 rounded-xl border border-emerald-100 space-y-1">
+              <p><i class="fa-solid fa-clock mr-1 text-emerald-600"></i><strong>開放時間：</strong>04:00–18:00（清晨最熱鬧）</p>
+              <p><i class="fa-solid fa-star mr-1 text-emerald-600"></i><strong>推薦：</strong>果乾、軟糖、花環、泰北咖哩醬</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-cardbg rounded-2xl overflow-hidden shadow-sm border border-terra-100">
+          <div class="bg-emerald-700 text-white px-4 py-3 flex items-center space-x-2">
+            <i class="fa-solid fa-store text-lg"></i>
+            <div><h3 class="font-bold text-sm">雨樹市集</h3><p class="text-[10px] text-emerald-200 font-outfit">Rain Tree Market</p></div>
+            <a href="https://www.google.com/maps/search/?api=1&query=18.7853061,99.0477042" target="_blank" class="ml-auto text-emerald-200 hover:text-white"><i class="fa-solid fa-map-pin"></i></a>
+          </div>
+          <div class="p-4 text-xs leading-relaxed space-y-2 text-darktext">
+            <p>清邁近年最受歡迎的文創假日市集，藏身在大片雨樹林蔭之下，氛圍悠閒。販售手作商品、設計師品牌服飾、有機農產品及各式特色美食。週末限定，文青氛圍十足。</p>
+            <div class="bg-emerald-50 p-2.5 rounded-xl border border-emerald-100 space-y-1">
+              <p><i class="fa-solid fa-clock mr-1 text-emerald-600"></i><strong>開放時間：</strong>週六、日 10:00–17:00</p>
+              <p><i class="fa-solid fa-location-dot mr-1 text-emerald-600"></i><strong>位置：</strong>清邁東北郊，需包車或叫車前往</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-cardbg rounded-2xl overflow-hidden shadow-sm border border-terra-100">
+          <div class="bg-emerald-700 text-white px-4 py-3 flex items-center space-x-2">
+            <i class="fa-solid fa-store text-lg"></i>
+            <div><h3 class="font-bold text-sm">瓦洛洛市場</h3><p class="text-[10px] text-emerald-200 font-outfit">Warorot Market</p></div>
+            <a href="https://www.google.com/maps/search/?api=1&query=18.790241,98.999899" target="_blank" class="ml-auto text-emerald-200 hover:text-white"><i class="fa-solid fa-map-pin"></i></a>
+          </div>
+          <div class="p-4 text-xs leading-relaxed space-y-2 text-darktext">
+            <p>清邁最受本地人喜愛的市場，鄰近真心市集。一樓為生鮮食材、花市，二樓則是各式乾貨、泰北特產名產。推薦購買果乾（芒果乾、榴槤乾）、北方藤編製品及泰式軟糖。</p>
+            <div class="bg-emerald-50 p-2.5 rounded-xl border border-emerald-100 space-y-1">
+              <p><i class="fa-solid fa-clock mr-1 text-emerald-600"></i><strong>開放時間：</strong>06:00–18:00，每日</p>
+              <p><i class="fa-solid fa-star mr-1 text-emerald-600"></i><strong>必買：</strong>果乾、象包、北方藤編</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-cardbg rounded-2xl overflow-hidden shadow-sm border border-terra-100">
+          <div class="bg-emerald-700 text-white px-4 py-3 flex items-center space-x-2">
+            <i class="fa-solid fa-store text-lg"></i>
+            <div><h3 class="font-bold text-sm">椰林市集</h3><p class="text-[10px] text-emerald-200 font-outfit">Coconut Market / Talat Ton Payom</p></div>
+            <a href="https://www.google.com/maps/search/?api=1&query=18.8177712,99.0101074" target="_blank" class="ml-auto text-emerald-200 hover:text-white"><i class="fa-solid fa-map-pin"></i></a>
+          </div>
+          <div class="p-4 text-xs leading-relaxed space-y-2 text-darktext">
+            <p>位於清邁大學旁的社區型市集，以新鮮椰子產品、有機食材聞名。環境清幽，多為在地學生及居民光顧，消費平實，氣氛輕鬆。</p>
+            <div class="bg-emerald-50 p-2.5 rounded-xl border border-emerald-100 space-y-1">
+              <p><i class="fa-solid fa-clock mr-1 text-emerald-600"></i><strong>開放時間：</strong>清晨至午後，週日最熱鬧</p>
+              <p><i class="fa-solid fa-location-dot mr-1 text-emerald-600"></i><strong>位置：</strong>清邁大學西北側</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 夜市 -->
+      <div id="guide-night" class="guide-category hidden space-y-3">
+        <div class="bg-cardbg rounded-2xl overflow-hidden shadow-sm border border-terra-100">
+          <div class="bg-indigo-700 text-white px-4 py-3 flex items-center space-x-2">
+            <i class="fa-solid fa-moon text-lg"></i>
+            <div><h3 class="font-bold text-sm">週日夜市</h3><p class="text-[10px] text-indigo-200 font-outfit">Sunday Night Market • Wualai Walking Street</p></div>
+            <a href="https://www.google.com/maps/search/?api=1&query=18.78818,98.9881002" target="_blank" class="ml-auto text-indigo-200 hover:text-white"><i class="fa-solid fa-map-pin"></i></a>
+          </div>
+          <div class="p-4 text-xs leading-relaxed space-y-2 text-darktext">
+            <p>清邁最知名的步行街夜市，每週日於烏來街（Wualai Rd）舉辦，全長約 1 公里。販售手工藝品、銀器（Wualai 是銀器街）、服飾、美食，人潮洶湧。建議 17:00 前抵達以避開人潮高峰。</p>
+            <div class="bg-indigo-50 p-2.5 rounded-xl border border-indigo-100 space-y-1">
+              <p><i class="fa-solid fa-calendar mr-1 text-indigo-600"></i><strong>時間：</strong>每週日 17:00–22:00</p>
+              <p><i class="fa-solid fa-star mr-1 text-indigo-600"></i><strong>必買：</strong>銀器飾品、蘭那絲巾、手工皂</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-cardbg rounded-2xl overflow-hidden shadow-sm border border-terra-100">
+          <div class="bg-indigo-700 text-white px-4 py-3 flex items-center space-x-2">
+            <i class="fa-solid fa-moon text-lg"></i>
+            <div><h3 class="font-bold text-sm">週六夜市</h3><p class="text-[10px] text-indigo-200 font-outfit">Saturday Night Market</p></div>
+            <a href="https://www.google.com/maps/search/?api=1&query=18.7808949,98.9877676" target="_blank" class="ml-auto text-indigo-200 hover:text-white"><i class="fa-solid fa-map-pin"></i></a>
+          </div>
+          <div class="p-4 text-xs leading-relaxed space-y-2 text-darktext">
+            <p>週六夜市位於 Wualai 路附近，規模略小於週日夜市，但人潮較少，逛起來更為舒適。路邊有許多泰式小吃攤、手工藝品及現場音樂表演，適合悠閒晚逛。</p>
+            <div class="bg-indigo-50 p-2.5 rounded-xl border border-indigo-100 space-y-1">
+              <p><i class="fa-solid fa-calendar mr-1 text-indigo-600"></i><strong>時間：</strong>每週六 16:00–22:00</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-cardbg rounded-2xl overflow-hidden shadow-sm border border-terra-100">
+          <div class="bg-indigo-700 text-white px-4 py-3 flex items-center space-x-2">
+            <i class="fa-solid fa-moon text-lg"></i>
+            <div><h3 class="font-bold text-sm">白象夜市</h3><p class="text-[10px] text-indigo-200 font-outfit">White Elephant Night Bazaar</p></div>
+            <a href="https://www.google.com/maps/search/?api=1&query=18.7960243,98.9825675" target="_blank" class="ml-auto text-indigo-200 hover:text-white"><i class="fa-solid fa-map-pin"></i></a>
+          </div>
+          <div class="p-4 text-xs leading-relaxed space-y-2 text-darktext">
+            <p>位於古城南牆外的大型夜市綜合體，有室內購物中心、露天攤位與美食廣場。每晚均有現場歌唱表演，是觀光客與本地人共同喜愛的夜間娛樂場所。</p>
+            <div class="bg-indigo-50 p-2.5 rounded-xl border border-indigo-100 space-y-1">
+              <p><i class="fa-solid fa-calendar mr-1 text-indigo-600"></i><strong>時間：</strong>每日 18:00–24:00</p>
+              <p><i class="fa-solid fa-music mr-1 text-indigo-600"></i><strong>特色：</strong>每晚現場音樂表演</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-cardbg rounded-2xl overflow-hidden shadow-sm border border-terra-100">
+          <div class="bg-indigo-700 text-white px-4 py-3 flex items-center space-x-2">
+            <i class="fa-solid fa-moon text-lg"></i>
+            <div><h3 class="font-bold text-sm">清邁大學夜市</h3><p class="text-[10px] text-indigo-200 font-outfit">CMU Night Market</p></div>
+            <a href="https://www.google.com/maps/search/?api=1&query=18.807844,98.9562429" target="_blank" class="ml-auto text-indigo-200 hover:text-white"><i class="fa-solid fa-map-pin"></i></a>
+          </div>
+          <div class="p-4 text-xs leading-relaxed space-y-2 text-darktext">
+            <p>清邁大學旁的學生型夜市，以平價美食為主，泰式炒河粉、烤肉、椰子冰淇淋應有盡有。消費便宜，氣氛輕鬆，是體驗學生夜生活的好去處。</p>
+            <div class="bg-indigo-50 p-2.5 rounded-xl border border-indigo-100 space-y-1">
+              <p><i class="fa-solid fa-calendar mr-1 text-indigo-600"></i><strong>時間：</strong>每日 17:00–22:00</p>
+              <p><i class="fa-solid fa-star mr-1 text-indigo-600"></i><strong>特色：</strong>超平價泰式小吃、學生氣氛</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-cardbg rounded-2xl overflow-hidden shadow-sm border border-terra-100">
+          <div class="bg-indigo-700 text-white px-4 py-3 flex items-center space-x-2">
+            <i class="fa-solid fa-moon text-lg"></i>
+            <div><h3 class="font-bold text-sm">尼曼路復古市集</h3><p class="text-[10px] text-indigo-200 font-outfit">Nimman Market</p></div>
+            <a href="https://www.google.com/maps/search/?api=1&query=18.8000594,98.9678042" target="_blank" class="ml-auto text-indigo-200 hover:text-white"><i class="fa-solid fa-map-pin"></i></a>
+          </div>
+          <div class="p-4 text-xs leading-relaxed space-y-2 text-darktext">
+            <p>位於時髦寧曼路的週末夜市，攤位以文創小物、設計師服飾與精緻小吃為主，整體調性偏文青。鄰近 One Nimman 購物中心，逛完可接著去商場。</p>
+            <div class="bg-indigo-50 p-2.5 rounded-xl border border-indigo-100 space-y-1">
+              <p><i class="fa-solid fa-calendar mr-1 text-indigo-600"></i><strong>時間：</strong>週五–週日 17:00–22:00</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 自然景點 -->
+      <div id="guide-nature" class="guide-category hidden space-y-3">
+        <div class="bg-cardbg rounded-2xl overflow-hidden shadow-sm border border-terra-100">
+          <div class="bg-green-700 text-white px-4 py-3 flex items-center space-x-2">
+            <i class="fa-solid fa-water text-lg"></i>
+            <div><h3 class="font-bold text-sm">黏黏瀑布</h3><p class="text-[10px] text-green-200 font-outfit">Bua Tong Waterfall / Sticky Waterfall</p></div>
+            <a href="https://www.google.com/maps/search/?api=1&query=19.0694446,99.079073" target="_blank" class="ml-auto text-green-200 hover:text-white"><i class="fa-solid fa-map-pin"></i></a>
+          </div>
+          <div class="p-4 text-xs leading-relaxed space-y-2 text-darktext">
+            <p>泰北最神奇的自然奇景——因瀑布石灰岩中富含鈣質，讓石面具有超強附著力，遊客可以不穿鞋赤腳「黏著」岩石直接攀爬瀑布而上，而不會滑倒。是清邁周邊最獨特的體驗。</p>
+            <div class="bg-green-50 p-2.5 rounded-xl border border-green-100 space-y-1">
+              <p><i class="fa-solid fa-clock mr-1 text-green-600"></i><strong>開放時間：</strong>08:00–17:00</p>
+              <p><i class="fa-solid fa-ticket mr-1 text-green-600"></i><strong>門票：</strong>免費（停車費 20 THB）</p>
+              <p><i class="fa-solid fa-car mr-1 text-green-600"></i><strong>距離：</strong>距清邁市區約 70 km，車程約 1.5 小時</p>
+              <p><i class="fa-solid fa-shoe-prints mr-1 text-green-600"></i><strong>提醒：</strong>建議赤腳或穿涼鞋，帶換洗衣物</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <section id="tab-wallet" class="tab-content hidden space-y-4">
+
+      <div class="bg-cardbg rounded-2xl p-4 shadow-sm border border-terra-100 space-y-3">
+        <div class="flex justify-between items-center border-b border-gray-100 pb-2">
+          <h2 class="font-bold text-sm text-darktext"><i
+              class="fa-solid fa-calculator text-terra-500 mr-1.5"></i>匯率算數計算機</h2>
+          <div class="flex items-center space-x-1 text-xs">
+            <span class="text-gray-500">匯率:</span>
+            <input type="number" id="exchange-rate" value="0.92" step="0.01"
+              class="w-14 px-1 py-0.5 border border-terra-200 rounded text-center font-outfit text-xs text-terra-700 font-bold bg-warmbg"
+              onchange="saveRate()">
+          </div>
+        </div>
+
+        <div class="bg-warmbg p-3 rounded-xl border border-terra-200 text-right space-y-1">
+          <div class="text-xs text-gray-500 font-outfit h-4" id="calc-expression"></div>
+          <div class="text-2xl font-bold font-outfit text-terra-700" id="calc-display">0</div>
+          <div class="text-xs text-gray-600 font-outfit">≈ TWD <span id="calc-twd"
+              class="font-bold text-darktext">0</span></div>
+        </div>
+
+        <div class="grid grid-cols-4 gap-1.5 text-sm font-outfit">
+          <button onclick="calcInput('C')"
+            class="p-2.5 bg-red-50 text-red-600 font-bold rounded-lg active:scale-95 transition">C</button>
+          <button onclick="calcInput('/')"
+            class="p-2.5 bg-terra-100 text-terra-700 font-bold rounded-lg active:scale-95 transition">÷</button>
+          <button onclick="calcInput('*')"
+            class="p-2.5 bg-terra-100 text-terra-700 font-bold rounded-lg active:scale-95 transition">×</button>
+          <button onclick="calcInput('-')"
+            class="p-2.5 bg-terra-100 text-terra-700 font-bold rounded-lg active:scale-95 transition">-</button>
+
+          <button onclick="calcInput('7')"
+            class="p-2.5 bg-gray-50 text-darktext rounded-lg active:scale-95 transition">7</button>
+          <button onclick="calcInput('8')"
+            class="p-2.5 bg-gray-50 text-darktext rounded-lg active:scale-95 transition">8</button>
+          <button onclick="calcInput('9')"
+            class="p-2.5 bg-gray-50 text-darktext rounded-lg active:scale-95 transition">9</button>
+          <button onclick="calcInput('+')"
+            class="p-2.5 bg-terra-100 text-terra-700 font-bold rounded-lg active:scale-95 transition">+</button>
+
+          <button onclick="calcInput('4')"
+            class="p-2.5 bg-gray-50 text-darktext rounded-lg active:scale-95 transition">4</button>
+          <button onclick="calcInput('5')"
+            class="p-2.5 bg-gray-50 text-darktext rounded-lg active:scale-95 transition">5</button>
+          <button onclick="calcInput('6')"
+            class="p-2.5 bg-gray-50 text-darktext rounded-lg active:scale-95 transition">6</button>
+          <button onclick="calcEquals()"
+            class="row-span-2 p-2.5 bg-terra-500 text-white font-bold rounded-lg active:scale-95 transition flex items-center justify-center text-lg">=</button>
+
+          <button onclick="calcInput('1')"
+            class="p-2.5 bg-gray-50 text-darktext rounded-lg active:scale-95 transition">1</button>
+          <button onclick="calcInput('2')"
+            class="p-2.5 bg-gray-50 text-darktext rounded-lg active:scale-95 transition">2</button>
+          <button onclick="calcInput('3')"
+            class="p-2.5 bg-gray-50 text-darktext rounded-lg active:scale-95 transition">3</button>
+
+          <button onclick="calcInput('0')"
+            class="col-span-2 p-2.5 bg-gray-50 text-darktext rounded-lg active:scale-95 transition">0</button>
+          <button onclick="calcInput('.')"
+            class="p-2.5 bg-gray-50 text-darktext rounded-lg active:scale-95 transition">.</button>
+        </div>
+      </div>
+
+      <div class="bg-cardbg rounded-2xl p-4 shadow-sm border border-terra-100 space-y-3">
+        <h2 class="font-bold text-sm text-darktext"><i class="fa-solid fa-receipt text-terra-500 mr-1.5"></i>新增旅遊記帳</h2>
+        <div class="space-y-2 text-xs">
+          <div class="flex space-x-2">
+            <input type="date" id="expense-date" class="flex-1 p-2.5 bg-warmbg border border-terra-200 rounded-xl focus:outline-none focus:border-terra-500 font-outfit text-darktext">
+            <select id="expense-payer" class="flex-1 p-2.5 bg-warmbg border border-terra-200 rounded-xl focus:outline-none focus:border-terra-500 text-darktext">
+              <option value="">付款人...</option>
+              <option value="CHOE">CHOE</option>
+              <option value="CHIU">CHIU</option>
+              <option value="芓彤">芓彤</option>
+              <option value="雅筠">雅筠</option>
+            </select>
+          </div>
+          <input type="text" id="expense-title" placeholder="品項名稱 (例如：週日夜市小吃)"
+            class="w-full p-2.5 bg-warmbg border border-terra-200 rounded-xl focus:outline-none focus:border-terra-500">
+          <div class="flex space-x-2">
+            <input type="number" id="expense-amount" placeholder="泰銖金額 (THB)"
+              class="w-full p-2.5 bg-warmbg border border-terra-200 rounded-xl focus:outline-none focus:border-terra-500 font-outfit">
+            <label
+              class="cursor-pointer bg-terra-100 text-terra-700 px-3 py-2.5 rounded-xl border border-terra-200 flex items-center justify-center shrink-0 font-bold active:scale-95">
+              <i class="fa-solid fa-camera mr-1"></i>照片
+              <input type="file" id="expense-photo" accept="image/*" class="hidden" onchange="handlePhotoSelect(event)">
+            </label>
+          </div>
+          <div class="bg-warmbg border border-terra-200 rounded-xl p-2.5">
+            <p class="text-gray-500 mb-1.5 font-bold"><i class="fa-solid fa-users mr-1 text-terra-500"></i>分攤人員</p>
+            <div class="flex flex-wrap gap-2">
+              <label class="flex items-center space-x-1 cursor-pointer"><input type="checkbox" value="CHOE" class="split-cb accent-terra-500"><span>CHOE</span></label>
+              <label class="flex items-center space-x-1 cursor-pointer"><input type="checkbox" value="CHIU" class="split-cb accent-terra-500"><span>CHIU</span></label>
+              <label class="flex items-center space-x-1 cursor-pointer"><input type="checkbox" value="芓彤" class="split-cb accent-terra-500"><span>芓彤</span></label>
+              <label class="flex items-center space-x-1 cursor-pointer"><input type="checkbox" value="雅筠" class="split-cb accent-terra-500"><span>雅筠</span></label>
+            </div>
+          </div>
+          <div id="photo-preview-container" class="hidden relative inline-block">
+            <img id="photo-preview" class="h-16 w-16 object-cover rounded-lg border border-terra-300">
+            <button onclick="clearPhotoPreview()"
+              class="absolute -top-1.5 -right-1.5 bg-red-500 text-white rounded-full w-4 h-4 flex items-center justify-center text-[10px]"><i
+                class="fa-solid fa-xmark"></i></button>
+          </div>
+          <button onclick="addExpense()"
+            class="w-full py-2.5 bg-terra-500 text-white font-bold rounded-xl shadow active:scale-98 transition">新增記帳紀錄</button>
+        </div>
+      </div>
+
+      <div class="bg-cardbg rounded-2xl p-4 shadow-sm border border-terra-100 space-y-3">
+        <div class="flex justify-between items-center border-b border-gray-100 pb-2">
+          <h2 class="font-bold text-sm text-darktext"><i class="fa-solid fa-list-check text-terra-500 mr-1.5"></i>消費歷史
+          </h2>
+          <span class="text-xs font-outfit text-terra-600 font-bold">總計: <span id="total-thb">0</span> THB</span>
+        </div>
+        <div id="expense-list" class="space-y-2">
+        </div>
+      </div>
+
+    </section>
+
+    <section id="tab-lists" class="tab-content hidden space-y-4">
+
+      <div class="bg-cardbg rounded-2xl p-4 shadow-sm border border-terra-100 space-y-3">
+        <h2 class="font-bold text-sm text-darktext border-b border-gray-100 pb-2"><i
+            class="fa-solid fa-clipboard-check text-terra-500 mr-1.5"></i>行前準備 CheckList</h2>
+
+        <div class="space-y-3 text-xs">
+          <div>
+            <span class="font-bold text-terra-600 block mb-1.5">【事先申請與手續】</span>
+            <div class="space-y-1.5" id="checklist-prep">
+            </div>
+          </div>
+          <div>
+            <span class="font-bold text-terra-600 block mb-1.5">【攜帶物品清單】</span>
+            <div class="grid grid-cols-2 gap-1.5" id="checklist-items">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-cardbg rounded-2xl p-4 shadow-sm border border-terra-100 space-y-3">
+        <h2 class="font-bold text-sm text-darktext"><i class="fa-solid fa-note-sticky text-terra-500 mr-1.5"></i>個人備忘錄
+        </h2>
+        <div class="space-y-2">
+          <textarea id="memo-input" rows="3" placeholder="自由輸入備忘文字或網址..."
+            class="w-full p-2.5 bg-warmbg border border-terra-200 rounded-xl text-xs focus:outline-none focus:border-terra-500"></textarea>
+          <button onclick="saveMemo()"
+            class="w-full py-2 bg-terra-500 text-white text-xs font-bold rounded-xl active:scale-98">儲存備忘錄</button>
+        </div>
+        <div id="memo-display-list" class="space-y-2 pt-2">
+        </div>
+      </div>
+
+    </section>
+
+    <section id="tab-info" class="tab-content hidden space-y-4">
+
+      <div class="bg-cardbg rounded-2xl p-4 shadow-sm border border-terra-100 space-y-3">
+        <h2 class="font-bold text-sm text-darktext border-b border-gray-100 pb-2"><i
+            class="fa-solid fa-circle-info text-terra-500 mr-1.5"></i>實用工具與緊急連絡</h2>
+        <div class="grid grid-cols-1 gap-2 text-xs">
+          <div class="p-3 bg-warmbg border border-terra-200 rounded-xl space-y-2">
+            <p class="font-bold text-terra-700"><i class="fa-solid fa-cloud-sun-rain mr-1.5 text-terra-500"></i>清邁天氣預報（09/12–09/19）</p>
+            <div class="grid grid-cols-4 gap-1.5 text-center text-[10px]" id="weather-grid">
+              <div class="bg-terra-50 rounded-lg p-1.5 border border-terra-100">
+                <div class="text-[9px] text-gray-500 font-outfit">09/12六</div>
+                <div class="text-lg my-0.5">⛅</div>
+                <div class="font-bold text-darktext">30°C</div>
+                <div class="text-gray-500">多雲</div>
+              </div>
+              <div class="bg-terra-50 rounded-lg p-1.5 border border-terra-100">
+                <div class="text-[9px] text-gray-500 font-outfit">09/13日</div>
+                <div class="text-lg my-0.5">🌦️</div>
+                <div class="font-bold text-darktext">29°C</div>
+                <div class="text-gray-500">午後雷陣雨</div>
+              </div>
+              <div class="bg-terra-50 rounded-lg p-1.5 border border-terra-100">
+                <div class="text-[9px] text-gray-500 font-outfit">09/14一</div>
+                <div class="text-lg my-0.5">🌤️</div>
+                <div class="font-bold text-darktext">31°C</div>
+                <div class="text-gray-500">多雲晴</div>
+              </div>
+              <div class="bg-terra-50 rounded-lg p-1.5 border border-terra-100">
+                <div class="text-[9px] text-gray-500 font-outfit">09/15二</div>
+                <div class="text-lg my-0.5">🌧️</div>
+                <div class="font-bold text-darktext">28°C</div>
+                <div class="text-gray-500">有雨</div>
+              </div>
+              <div class="bg-terra-50 rounded-lg p-1.5 border border-terra-100">
+                <div class="text-[9px] text-gray-500 font-outfit">09/16三</div>
+                <div class="text-lg my-0.5">⛅</div>
+                <div class="font-bold text-darktext">30°C</div>
+                <div class="text-gray-500">多雲</div>
+              </div>
+              <div class="bg-terra-50 rounded-lg p-1.5 border border-terra-100">
+                <div class="text-[9px] text-gray-500 font-outfit">09/17四</div>
+                <div class="text-lg my-0.5">🌤️</div>
+                <div class="font-bold text-darktext">31°C</div>
+                <div class="text-gray-500">多雲晴</div>
+              </div>
+              <div class="bg-terra-50 rounded-lg p-1.5 border border-terra-100">
+                <div class="text-[9px] text-gray-500 font-outfit">09/18五</div>
+                <div class="text-lg my-0.5">🌦️</div>
+                <div class="font-bold text-darktext">29°C</div>
+                <div class="text-gray-500">午後有雨</div>
+              </div>
+              <div class="bg-terra-50 rounded-lg p-1.5 border border-terra-100">
+                <div class="text-[9px] text-gray-500 font-outfit">09/19六</div>
+                <div class="text-lg my-0.5">☀️</div>
+                <div class="font-bold text-darktext">32°C</div>
+                <div class="text-gray-500">晴</div>
+              </div>
+            </div>
+            <a href="https://www.tmd.go.th/en" target="_blank" class="flex items-center justify-center text-[10px] text-terra-600 font-bold mt-1">
+              <i class="fa-solid fa-arrow-up-right-from-square mr-1"></i>查看泰國氣象局即時預報
+            </a>
+          </div>
+        </div>
+        <div class="bg-red-50 p-3 rounded-xl border border-red-100 text-xs space-y-1.5 text-red-900">
+          <p class="font-bold"><i class="fa-solid fa-phone-volume mr-1.5 text-red-500"></i>緊急聯絡電話</p>
+          <div class="grid grid-cols-2 gap-1 pt-1 font-outfit">
+            <p>觀光警察: <a href="tel:1155" class="underline font-bold">1155</a></p>
+            <p>報案專線: <a href="tel:191" class="underline font-bold">191</a></p>
+            <p>救護車: <a href="tel:1669" class="underline font-bold">1669</a></p>
+            <p class="col-span-2">駐泰代表處: <a href="tel:+66-81-666-4006" class="underline font-bold">+66-81-666-4006</a>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-cardbg rounded-2xl p-4 shadow-sm border border-terra-100 space-y-3 text-xs leading-relaxed">
+        <h2 class="font-bold text-sm text-darktext border-b border-gray-100 pb-2"><i
+            class="fa-solid fa-triangle-exclamation text-terra-500 mr-1.5"></i>旅遊注意事項與禁忌</h2>
+        <ul class="list-disc list-inside space-y-2 text-gray-700">
+          <li><strong>寺廟穿著：</strong>服裝需著有袖上衣，下身須過膝，進入殿堂需脫鞋。若穿短褲/短裙，多數寺廟門口會提供披肩或長裙租借（需小費或押金）。</li>
+          <li><strong>泰王尊嚴：</strong>切勿私下或公開對泰國皇室進行批評或不敬行為，違反冒犯君主法最高可判刑 15 年。</li>
+          <li><strong>頭部禁忌：</strong>在泰國頭部被視為神聖部位，請勿摸小孩子或他人的頭部。</li>
+          <li><strong>腳部禁忌：</strong>勿以腳指向人或佛像，勿在寺廟內蹺腳、坐時腳底朝向佛像。</li>
+          <li><strong>左手遞物：</strong>遞送物品給他人時請使用右手或雙手，避免使用左手。</li>
+          <li><strong>出入境違禁：</strong>嚴禁攜帶電子煙回台（可罰款至拘役）；大麻製品請勿攜帶，泰國規定時有變動，以最新法規為準。</li>
+          <li><strong>電器插頭：</strong>泰國電壓 220V、插座為扁兩腳型（A/B型），與台灣（110V）不同。<br>✔ 台灣電器若為「100-240V 自動變壓」（多數手機、筆電充電器）可直接使用，僅需帶<strong>轉接頭</strong>。<br>⚠ 非自動變壓電器（如吹風機、刮鬍刀充電座）需另帶<strong>變壓器</strong>，否則會燒壞。民宿通常備有吹風機，出發前可確認。</li>
+          <li><strong>飲水注意：</strong>泰國自來水不可生飲，請飲用礦泉水或瓶裝水，冰塊亦須留意是否為純淨冰。</li>
+          <li><strong>防曬蚊蟲：</strong>清邁 9 月為雨季尾聲，濕熱多雨，蚊蟲較多，建議攜帶防蚊液及防曬乳。</li>
+          <li><strong>砍價禮儀：</strong>傳統市場可適度議價，超市、百貨公司及餐廳為標價制，請勿任意砍價。</li>
+        </ul>
+      </div>
+
+    </section>
+
+  </main>
+
+  <nav
+    class="fixed bottom-0 left-0 right-0 bg-cardbg/95 backdrop-blur-md border-t border-terra-200 z-50 py-2 shadow-lg">
+    <div class="max-w-md mx-auto flex justify-around items-center">
+      <button onclick="switchTab('plan')" id="nav-plan" class="nav-btn flex flex-col items-center text-terra-500">
+        <i class="fa-solid fa-calendar-days text-base"></i>
+        <span class="text-[10px] font-outfit mt-1 font-bold">PLAN</span>
+      </button>
+      <button onclick="switchTab('guide')" id="nav-guide" class="nav-btn flex flex-col items-center text-gray-400">
+        <i class="fa-solid fa-compass text-base"></i>
+        <span class="text-[10px] font-outfit mt-1 font-bold">GUIDE</span>
+      </button>
+      <button onclick="switchTab('wallet')" id="nav-wallet" class="nav-btn flex flex-col items-center text-gray-400">
+        <i class="fa-solid fa-wallet text-base"></i>
+        <span class="text-[10px] font-outfit mt-1 font-bold">WALLET</span>
+      </button>
+      <button onclick="switchTab('lists')" id="nav-lists" class="nav-btn flex flex-col items-center text-gray-400">
+        <i class="fa-solid fa-list-check text-base"></i>
+        <span class="text-[10px] font-outfit mt-1 font-bold">LISTS</span>
+      </button>
+      <button onclick="switchTab('info')" id="nav-info" class="nav-btn flex flex-col items-center text-gray-400">
+        <i class="fa-solid fa-circle-info text-base"></i>
+        <span class="text-[10px] font-outfit mt-1 font-bold">INFO</span>
+      </button>
+    </div>
+  </nav>
+
+  <script>
+    // --- SCHEDULE DATA ---
+    const rawSchedules = [
+      {
+        dateStr: '09/12', week: '六',
+        bf: '自理', lunch: '飛機餐', dinner: '夜市',
+        note: '◎抵達機場後叫車先去Checkin, 再去換匯所換錢',
+        items: [
+          { time: '08:31', text: '火車(CHOE)', noMap: true },
+          { time: '09:24', text: '高鐵(彰化)', noMap: true },
+          { time: '09:36', text: '高鐵(台中)', noMap: true },
+          { time: '13:05', text: '桃機T2起飛', noMap: true },
+          { time: '16:05', text: '抵達清邁機場', noMap: true },
+          { time: '18:00', text: '週六夜市', coords: '18.7808949,98.9877676' }
+        ]
+      },
+      {
+        dateStr: '09/13', week: '日',
+        bf: '民宿簡易早餐', lunch: '市集', dinner: '夜市',
+        note: '◎寺廟衣著注意：\n上衣：建議有袖上衣\n下身：褲子/裙子須超過膝蓋\n鞋子：好穿脫鞋款',
+        items: [
+          { time: '07:30', text: '真心市集', coords: '18.8062295,98.995325' },
+          { time: '11:00', text: '雨樹市集', coords: '18.7853061,99.0477042' },
+          { time: '16:00', text: '探訪古城寺廟', subtext: '【帕邢寺 / 柴迪隆寺 / 塔佩門】', coords: '18.7869693,98.9865804' },
+          { time: '18:00', text: '週日夜市', coords: '18.78818,98.9881002' }
+        ]
+      },
+      {
+        dateStr: '09/14', week: '一',
+        bf: '民宿簡易早餐', lunch: '烹飪課', dinner: 'Kaprao Nueanuea Chang Moi',
+        note: '◎瓦洛洛市場可買：果乾、軟糖、大象小包',
+        items: [
+          { time: '08:30', text: "Grandma's Home 烹飪課", coords: '18.677474,99.054517' },
+          { time: '15:00', text: '探訪傳統市場及選物店', subtext: '【瓦洛洛市場 / Favs Selected / J•Lin Jewelry / 周桂發(藤編一條街) / Neighborhood Community】', coords: '18.790241,98.999899' },
+          { time: '20:00', text: '按摩【Long Massage】', coords: '18.7951003,98.9818017' }
+        ]
+      },
+      {
+        dateStr: '09/15', week: '二', group: '【逛街組】',
+        bf: '民宿簡易早餐', lunch: 'Bella Madre Pizza + Joost Smoothies', dinner: '夜市',
+        note: '',
+        items: [
+          { time: '08:45', text: '傳統腰機織布【Thai Tribal Crafts Fair Trade】', coords: '18.7968202,99.0083337' },
+          { time: '13:30', text: '逛街', subtext: '【sundry by linnil / MADAM CNX / Akaliko design shop / Rivers & Roads / Chiang Mai City Craft Space / Mintnimal / Needle and Clay】', coords: '18.7880776,99.0007605' },
+          { time: '18:00', text: '羅摩利寺 / 白象夜市', coords: '18.7960243,98.9825675' }
+        ]
+      },
+      {
+        dateStr: '09/15', week: '二', group: '【體驗組】',
+        bf: '民宿簡易早餐', lunch: '自理', dinner: '夜市',
+        note: '',
+        items: [
+          { time: '07:30', text: '出發體驗', noMap: true },
+          { time: '09:00', text: '黏黏瀑布', coords: '19.0694446,99.079073' },
+          { time: '10:30', text: 'Elely Cafe', coords: '19.0680000,99.0760000' },
+          { time: '14:00', text: 'Baan Orjao 泰服體驗', coords: '18.7854374,98.9907063' },
+          { time: '18:00', text: '羅摩利寺 / 白象夜市', coords: '18.7960243,98.9825675' }
+        ]
+      },
+      {
+        dateStr: '09/16', week: '三',
+        bf: '民宿簡易早餐', lunch: 'Khao Soi Maesai', dinner: 'Mooyim JimJum Hotpot Restaurant',
+        note: '退房並更換住宿至 Nimman Bed @9',
+        items: [
+          { time: '10:00', text: '退房換住宿', noMap: true },
+          { time: '10:30', text: '泰北咖哩麵', coords: '18.7995989,98.9752135' },
+          { time: '11:00', text: '寧曼1號 / Maya百貨', coords: '18.8003218,98.9676685' },
+          { time: '15:00', text: '按摩【Stayments Massage】', coords: '18.7998986,98.9638985' },
+          { time: '17:00', text: '泰北陶鍋', coords: '18.8057894,98.9732267' },
+          { time: '19:00', text: '尼曼路復古市集', coords: '18.8000594,98.9678042' }
+        ]
+      },
+      {
+        dateStr: '09/17', week: '四',
+        bf: '自理', lunch: 'Yook Samai', dinner: 'Real Good Pasta',
+        note: '※按摩完再吃晚餐',
+        items: [
+          { time: '10:00', text: '藝術村', coords: '18.7763256,98.9487285' },
+          { time: '15:00', text: 'Joogarood cafe', coords: '18.7902541,98.9516393' },
+          { time: '17:00', text: '寧曼白色市集', coords: '18.7997598,98.9674352' },
+          { time: '19:00', text: '按摩【Moment Nimman Massage】', coords: '18.7977437,98.9675794' }
+        ]
+      },
+      {
+        dateStr: '09/18', week: '五',
+        bf: '自理', lunch: '市集', dinner: '夜市',
+        note: '',
+        items: [
+          { time: '08:30', text: '椰林市集', coords: '18.8177712,99.0101074' },
+          { time: '11:00', text: '按摩【sum bamboo massage】', coords: '18.8243755,99.008989' },
+          { time: '13:00', text: 'Big C 採購', coords: '18.7977052,99.0217934' },
+          { time: '16:00', text: '咖啡廳【Graph One Nimman 或 FOHHIDE】', coords: '18.7999212,98.9681402' },
+          { time: '18:30', text: '清邁大學夜市', coords: '18.807844,98.9562429' }
+        ]
+      },
+      {
+        dateStr: '09/19', week: '六',
+        bf: '自理', lunch: '市集', dinner: '飛機餐',
+        note: '',
+        items: [
+          { time: '08:00', text: '真心市集', coords: '18.8062295,98.995325' },
+          { time: '14:00', text: '準備前往機場', noMap: true },
+          { time: '17:20', text: '清邁機場起飛', noMap: true },
+          { time: '22:10', text: '抵達桃機 T2', noMap: true },
+          { time: '23:00', text: '包車回台中 / 彰化', noMap: true }
+        ]
+      }
+    ];
+
+    let activeDateIdx = 0;
+
+    // --- TAB SWITCHING ---
+    function switchTab(tabId) {
+      document.querySelectorAll('.tab-content').forEach(el => el.classList.add('hidden'));
+      document.querySelectorAll('.nav-btn').forEach(el => {
+        el.classList.remove('text-terra-500');
+        el.classList.add('text-gray-400');
+      });
+
+      document.getElementById(`tab-${tabId}`).classList.remove('hidden');
+      document.getElementById(`nav-${tabId}`).classList.remove('text-gray-400');
+      document.getElementById(`nav-${tabId}`).classList.add('text-terra-500');
+    }
+
+    // --- HELPER: RENDER TEXT WITH LINKS ---
+    function renderTextWithLinks(text) {
+      if (!text) return '';
+      const urlRegex = /(https?:\/\/[^\s]+)/g;
+      return text.replace(urlRegex, function (url) {
+        return `<a href="${url}" target="_blank" class="inline-flex items-center text-xs font-bold text-terra-600 bg-terra-100 px-2 py-0.5 rounded border border-terra-200 hover:underline my-1"><i class="fa-solid fa-link mr-1"></i>開啟連結</a>`;
+      });
+    }
+
+    // --- RENDER SCHEDULE ---
+    function initScheduleNav() {
+      const btnContainer = document.getElementById('date-buttons');
+      btnContainer.innerHTML = '';
+
+      rawSchedules.forEach((sch, idx) => {
+        const btn = document.createElement('button');
+        btn.className = `shrink-0 px-3 py-1.5 rounded-xl font-outfit text-xs font-bold transition ${idx === activeDateIdx
+          ? 'bg-terra-500 text-white shadow-sm'
+          : 'bg-cardbg text-gray-600 border border-terra-100'
+          }`;
+        btn.innerText = `${sch.dateStr} (${sch.week})${sch.group ? ' ' + sch.group : ''}`;
+        btn.onclick = () => {
+          activeDateIdx = idx;
+          initScheduleNav();
+          renderScheduleContent();
+        };
+        btnContainer.appendChild(btn);
+      });
+    }
+
+    function renderScheduleContent() {
+      const container = document.getElementById('daily-schedule-container');
+      const data = rawSchedules[activeDateIdx];
+
+      const userMemoKey = `daily_memo_${activeDateIdx}`;
+      const savedUserMemo = localStorage.getItem(userMemoKey) || '';
+
+      let itemsHtml = data.items.map(item => {
+        let mapsBtn = '';
+        if (!item.noMap) {
+          const mapsUrl = item.coords
+            ? `https://www.google.com/maps/search/?api=1&query=${item.coords}`
+            : `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(item.text.replace(/【.*?】/g, ''))}`;
+          mapsBtn = `
+            <a href="${mapsUrl}" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-terra-500 text-xs shrink-0 pt-0.5" title="Google Maps">
+              <i class="fa-solid fa-map-pin"></i>
+            </a>
+          `;
+        }
+
+        const subtextHtml = item.subtext
+          ? `<p class="text-[11px] text-gray-500 mt-0.5 leading-relaxed">${item.subtext}</p>`
+          : '';
+
+        return `
+          <div class="flex items-start space-x-3 p-2.5 rounded-xl bg-warmbg border border-terra-100/70">
+            <span class="font-outfit font-bold text-terra-600 text-xs w-12 shrink-0 pt-0.5">${item.time}</span>
+            <div class="flex-grow">
+              <p class="text-xs font-semibold text-darktext">${item.text}</p>
+              ${subtextHtml}
+            </div>
+            ${mapsBtn}
+          </div>
+        `;
+      }).join('');
+
+      container.innerHTML = `
+        <div class="bg-cardbg rounded-2xl p-4 shadow-sm border border-terra-100 space-y-3">
+          <div class="flex justify-between items-center border-b border-gray-100 pb-2">
+            <h3 class="font-bold text-darktext text-sm">${data.dateStr} (${data.week})${data.group ? ' ' + data.group : ''}</h3>
+          </div>
+
+          <div class="space-y-1.5">
+            ${itemsHtml}
+          </div>
+
+          <div class="grid grid-cols-3 gap-2 text-[11px] bg-terra-50 p-2.5 rounded-xl border border-terra-100">
+            <div><span class="text-gray-500 block">早餐</span><span class="font-bold text-terra-700">${data.bf}</span></div>
+            <div><span class="text-gray-500 block">午餐</span><span class="font-bold text-terra-700">${data.lunch}</span></div>
+            <div><span class="text-gray-500 block">晚餐</span><span class="font-bold text-terra-700">${data.dinner}</span></div>
+          </div>
+
+          ${data.note ? `
+            <div class="bg-warmbg p-2.5 rounded-xl border border-terra-200/60 text-xs text-gray-600">
+              <div class="font-bold text-terra-600 mb-1"><i class="fa-solid fa-circle-info mr-1"></i>備註資訊：</div>
+              <div class="whitespace-pre-line leading-relaxed">${data.note}</div>
+            </div>
+          ` : ''}
+
+          <div class="pt-2 border-t border-gray-100 space-y-2">
+            <label class="font-bold text-xs text-darktext block"><i class="fa-solid fa-pen-to-square text-terra-500 mr-1"></i>當日行程個人備忘</label>
+            <textarea id="daily-memo-input" rows="2" placeholder="記下車票號碼、集合細節或私人網址..." class="w-full p-2 bg-warmbg border border-terra-200 rounded-xl text-xs focus:outline-none focus:border-terra-500">${savedUserMemo}</textarea>
+            <div class="flex justify-between items-center">
+              <button onclick="saveDailyMemo(${activeDateIdx})" class="px-3 py-1 bg-terra-500 text-white text-xs font-bold rounded-lg shadow">儲存當日備忘</button>
+            </div>
+            <div id="daily-memo-display" class="text-xs text-darktext pt-1">
+              ${renderTextWithLinks(savedUserMemo)}
+            </div>
+          </div>
+        </div>
+      `;
+    }
+
+    function saveDailyMemo(idx) {
+      const val = document.getElementById('daily-memo-input').value;
+      localStorage.setItem(`daily_memo_${idx}`, val);
+      document.getElementById('daily-memo-display').innerHTML = renderTextWithLinks(val);
+      alert('當日備忘錄已儲存！');
+    }
+
+    // --- CALCULATOR & CONVERTER ---
+    let calcExpr = '';
+
+    function calcInput(char) {
+      if (char === 'C') {
+        calcExpr = '';
+      } else {
+        calcExpr += char;
+      }
+      updateCalcDisplay();
+    }
+
+    function calcEquals() {
+      try {
+        if (!calcExpr) return;
+        let sanitized = calcExpr.replace(/[^0-9+\-*/.]/g, '');
+        let result = Function(`'use strict'; return (${sanitized})`)();
+        calcExpr = String(Math.round(result * 100) / 100);
+      } catch (e) {
+        calcExpr = 'Error';
+      }
+      updateCalcDisplay();
+    }
+
+    function updateCalcDisplay() {
+      const display = document.getElementById('calc-display');
+      const exprEl = document.getElementById('calc-expression');
+      const twdEl = document.getElementById('calc-twd');
+      const rate = parseFloat(document.getElementById('exchange-rate').value) || 0.92;
+
+      exprEl.innerText = calcExpr;
+      let val = parseFloat(calcExpr) || 0;
+      display.innerText = calcExpr || '0';
+      twdEl.innerText = Math.round(val * rate);
+    }
+
+    function saveRate() {
+      const rate = document.getElementById('exchange-rate').value;
+      localStorage.setItem('cm_exchange_rate', rate);
+      updateCalcDisplay();
+    }
+
+    // --- EXPENSE TRACKER ---
+    let expenses = JSON.parse(localStorage.getItem('cm_expenses') || '[]');
+    let currentPhotoBase64 = '';
+
+    function handlePhotoSelect(e) {
+      const file = e.target.files[0];
+      if (!file) return;
+
+      const reader = new FileReader();
+      reader.onload = function (event) {
+        const img = new Image();
+        img.onload = function () {
+          const canvas = document.createElement('canvas');
+          const maxDim = 300;
+          let w = img.width;
+          let h = img.height;
+          if (w > h) {
+            if (w > maxDim) { h *= maxDim / w; w = maxDim; }
+          } else {
+            if (h > maxDim) { w *= maxDim / h; h = maxDim; }
+          }
+          canvas.width = w;
+          canvas.height = h;
+          const ctx = canvas.getContext('2d');
+          ctx.drawImage(img, 0, 0, w, h);
+          currentPhotoBase64 = canvas.toDataURL('image/jpeg', 0.6);
+
+          document.getElementById('photo-preview').src = currentPhotoBase64;
+          document.getElementById('photo-preview-container').classList.remove('hidden');
+        };
+        img.src = event.target.result;
+      };
+      reader.readAsDataURL(file);
+    }
+
+    function clearPhotoPreview() {
+      currentPhotoBase64 = '';
+      document.getElementById('photo-preview-container').classList.add('hidden');
+      document.getElementById('expense-photo').value = '';
+    }
+
+    function addExpense() {
+      const title = document.getElementById('expense-title').value.trim();
+      const amount = parseFloat(document.getElementById('expense-amount').value);
+      const date = document.getElementById('expense-date').value;
+      const payer = document.getElementById('expense-payer').value;
+      const splitCbs = document.querySelectorAll('.split-cb:checked');
+      const splitWith = Array.from(splitCbs).map(cb => cb.value);
+
+      if (!title || isNaN(amount)) {
+        alert('請填寫有效的品項名稱與金額');
+        return;
+      }
+
+      const item = {
+        id: Date.now(),
+        date: date,
+        title: title,
+        amount: amount,
+        payer: payer,
+        splitWith: splitWith,
+        photo: currentPhotoBase64
+      };
+
+      expenses.unshift(item);
+      localStorage.setItem('cm_expenses', JSON.stringify(expenses));
+
+      document.getElementById('expense-title').value = '';
+      document.getElementById('expense-amount').value = '';
+      document.getElementById('expense-date').value = '';
+      document.getElementById('expense-payer').value = '';
+      document.querySelectorAll('.split-cb').forEach(cb => cb.checked = false);
+      clearPhotoPreview();
+
+      renderExpenses();
+    }
+
+    function deleteExpense(id) {
+      expenses = expenses.filter(e => e.id !== id);
+      localStorage.setItem('cm_expenses', JSON.stringify(expenses));
+      renderExpenses();
+    }
+
+    function renderExpenses() {
+      const list = document.getElementById('expense-list');
+      const rate = parseFloat(document.getElementById('exchange-rate').value) || 0.92;
+      list.innerHTML = '';
+
+      let totalTHB = 0;
+
+      if (expenses.length === 0) {
+        list.innerHTML = `<p class="text-xs text-gray-400 text-center py-4">尚無記帳紀錄</p>`;
+      }
+
+      expenses.forEach(item => {
+        totalTHB += item.amount;
+        const twd = Math.round(item.amount * rate);
+        const splitCount = item.splitWith && item.splitWith.length > 0 ? item.splitWith.length : 1;
+        const perPerson = Math.round((item.amount / splitCount) * rate);
+
+        const div = document.createElement('div');
+        div.className = 'bg-warmbg p-2.5 rounded-xl border border-terra-100 text-xs space-y-1.5';
+        div.innerHTML = `
+          <div class="flex items-start justify-between">
+            <div class="flex items-center space-x-2.5">
+              ${item.photo ? `<img src="${item.photo}" class="w-10 h-10 object-cover rounded-lg border border-terra-200 shrink-0">` : '<div class="w-10 h-10 bg-terra-50 rounded-lg flex items-center justify-center text-terra-400 shrink-0"><i class="fa-solid fa-receipt"></i></div>'}
+              <div>
+                ${item.date ? `<p class="text-[10px] text-gray-400 font-outfit">${item.date}</p>` : ''}
+                <p class="font-bold text-darktext">${item.title}</p>
+                <p class="text-[10px] text-gray-500 font-outfit">≈ TWD ${twd}</p>
+              </div>
+            </div>
+            <div class="flex items-center space-x-2 shrink-0">
+              <span class="font-bold font-outfit text-terra-600">${item.amount} THB</span>
+              <button onclick="deleteExpense(${item.id})" class="text-gray-300 hover:text-red-500 p-1"><i class="fa-solid fa-trash"></i></button>
+            </div>
+          </div>
+          <div class="flex flex-wrap gap-1 pt-0.5">
+            ${item.payer ? `<span class="bg-terra-100 text-terra-700 px-1.5 py-0.5 rounded font-bold"><i class="fa-solid fa-credit-card mr-1"></i>${item.payer} 付</span>` : ''}
+            ${item.splitWith && item.splitWith.length > 0 ? `<span class="bg-warmbg border border-terra-200 text-gray-600 px-1.5 py-0.5 rounded"><i class="fa-solid fa-users mr-1"></i>分攤：${item.splitWith.join('、')}（各約TWD ${perPerson}）</span>` : ''}
+          </div>
+        `;
+        list.appendChild(div);
+      });
+
+      document.getElementById('total-thb').innerText = totalTHB;
+    }
+
+    // --- CHECKLIST & MEMOS ---
+    const prepItems = [
+      '旅遊平安不便險投保',
+      { label: '09/09 13:05後 填寫 TDAC', link: 'https://tdac.immigration.go.th/', linkLabel: '→ 開啟TDAC填寫' },
+      '09/10 13:05後 挑選機位',
+      'eSIM 設定'
+    ];
+    const packItems = ['護照', '藥品', '維他命', '防曬乳', '信用卡', '外幣', '行動電源', '相機', '記憶卡', '充電線', '手持電風扇', '雨傘', '收納袋', '壓縮袋', '枕頭', '指甲剪', '盥洗用品(牙刷牙膏)', '拖鞋/涼鞋', '眼罩'];
+
+    let checkState = JSON.parse(localStorage.getItem('cm_checklist') || '{}');
+
+    function initChecklist() {
+      const prepContainer = document.getElementById('checklist-prep');
+      const itemsContainer = document.getElementById('checklist-items');
+
+      prepContainer.innerHTML = prepItems.map((item, idx) => {
+        const key = `prep_${idx}`;
+        const checked = checkState[key] ? 'checked' : '';
+        const label = typeof item === 'string' ? item : item.label;
+        const linkHtml = (typeof item === 'object' && item.link)
+          ? `<a href="${item.link}" target="_blank" class="ml-auto text-terra-600 font-bold text-[10px] underline shrink-0">${item.linkLabel}</a>`
+          : '';
+        return `
+          <label class="flex items-center space-x-2 bg-warmbg p-2 rounded-lg border border-terra-100 cursor-pointer">
+            <input type="checkbox" ${checked} onchange="toggleCheck('${key}')" class="accent-terra-500 rounded">
+            <span class="text-darktext flex-grow">${label}</span>
+            ${linkHtml}
+          </label>
+        `;
+      }).join('');
+
+      itemsContainer.innerHTML = packItems.map((item, idx) => {
+        const key = `pack_${idx}`;
+        const checked = checkState[key] ? 'checked' : '';
+        return `
+          <label class="flex items-center space-x-2 bg-warmbg p-2 rounded-lg border border-terra-100 cursor-pointer">
+            <input type="checkbox" ${checked} onchange="toggleCheck('${key}')" class="accent-terra-500 rounded">
+            <span class="text-darktext">${item}</span>
+          </label>
+        `;
+      }).join('');
+    }
+
+    function toggleCheck(key) {
+      checkState[key] = !checkState[key];
+      localStorage.setItem('cm_checklist', JSON.stringify(checkState));
+    }
+
+    // Personal Memos
+    let personalMemos = JSON.parse(localStorage.getItem('cm_personal_memos') || '[]');
+
+    function saveMemo() {
+      const input = document.getElementById('memo-input');
+      const val = input.value.trim();
+      if (!val) return;
+
+      personalMemos.unshift({ id: Date.now(), text: val });
+      localStorage.setItem('cm_personal_memos', JSON.stringify(personalMemos));
+      input.value = '';
+      renderPersonalMemos();
+    }
+
+    function deleteMemo(id) {
+      personalMemos = personalMemos.filter(m => m.id !== id);
+      localStorage.setItem('cm_personal_memos', JSON.stringify(personalMemos));
+      renderPersonalMemos();
+    }
+
+    function renderPersonalMemos() {
+      const list = document.getElementById('memo-display-list');
+      list.innerHTML = '';
+
+      if (personalMemos.length === 0) {
+        list.innerHTML = `<p class="text-xs text-gray-400 text-center">尚未新增任何備忘錄</p>`;
+        return;
+      }
+
+      personalMemos.forEach(m => {
+        const div = document.createElement('div');
+        div.className = 'bg-warmbg p-2.5 rounded-xl border border-terra-200 text-xs flex justify-between items-start space-x-2';
+        div.innerHTML = `
+          <div class="space-y-1 break-all flex-grow">
+            <p class="whitespace-pre-line text-darktext">${m.text}</p>
+            <div>${renderTextWithLinks(m.text)}</div>
+          </div>
+          <button onclick="deleteMemo(${m.id})" class="text-gray-300 hover:text-red-500 shrink-0"><i class="fa-solid fa-xmark"></i></button>
+        `;
+        list.appendChild(div);
+      });
+    }
+
+    // --- GUIDE CATEGORY SWITCHER ---
+    function showGuideCategory(cat) {
+      document.querySelectorAll('.guide-category').forEach(el => el.classList.add('hidden'));
+      document.querySelectorAll('.guide-tab').forEach(btn => {
+        btn.classList.remove('bg-terra-500', 'text-white', 'shadow-sm');
+        btn.classList.add('bg-cardbg', 'text-gray-600', 'border', 'border-terra-100');
+      });
+      document.getElementById(`guide-${cat}`).classList.remove('hidden');
+      const activeBtn = document.getElementById(`gtab-${cat}`);
+      activeBtn.classList.add('bg-terra-500', 'text-white', 'shadow-sm');
+      activeBtn.classList.remove('bg-cardbg', 'text-gray-600', 'border', 'border-terra-100');
+    }
+
+    // --- INITIALIZATION ---
+    window.onload = function () {
+      const savedRate = localStorage.getItem('cm_exchange_rate');
+      if (savedRate) {
+        document.getElementById('exchange-rate').value = savedRate;
+      }
+
+      initScheduleNav();
+      renderScheduleContent();
+      renderExpenses();
+      initChecklist();
+      renderPersonalMemos();
+    };
+  </script>
+</body>
+
+</html>
