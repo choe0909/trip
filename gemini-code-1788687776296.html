@@ -3,7 +3,9 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
   <title>2026 CHIANG MAI RELAXING TRIP</title>
 
   <script src="https://cdn.tailwindcss.com"></script>
@@ -45,6 +47,7 @@
       background-color: #FDFBF7;
       color: #2C221E;
       -webkit-tap-highlight-color: transparent;
+      padding-bottom: calc(5.5rem + env(safe-area-inset-bottom, 0px));
     }
 
     .hide-scrollbar::-webkit-scrollbar {
@@ -58,7 +61,7 @@
   </style>
 </head>
 
-<body class="font-sans antialiased pb-24">
+<body class="font-sans antialiased">
 
   <header class="sticky top-0 z-40 bg-warmbg/90 backdrop-blur-md border-b border-terra-200 px-4 py-3 shadow-sm">
     <div class="max-w-md mx-auto flex justify-between items-center">
@@ -212,6 +215,22 @@
       <div id="guide-market" class="guide-category hidden space-y-3">
         <div class="bg-cardbg rounded-2xl overflow-hidden shadow-sm border border-terra-100">
           <div class="bg-emerald-700 text-white px-4 py-3 flex items-center space-x-2">
+            <i class="fa-solid fa-palette text-lg"></i>
+            <div><h3 class="font-bold text-sm">Baan Kang Wat 藝術村</h3><p class="text-[10px] text-emerald-200 font-outfit">Baan Kang Wat Craft Village</p></div>
+            <a href="https://www.google.com/maps/search/?api=1&query=18.7763256,98.9487285" target="_blank" class="ml-auto text-emerald-200 hover:text-white"><i class="fa-solid fa-map-pin"></i></a>
+          </div>
+          <div class="p-4 text-xs leading-relaxed space-y-2 text-darktext">
+            <p>隱身在素帖山腳下的森林系手作藝術聚落，由多棟傳統蘭那木造高腳屋與綠意花園環繞。聚集陶藝工坊、植物染織、木作工作室、獨立書店、手作選物店與特色咖啡店，是感受清邁文創與慢活氛圍的指標景點。</p>
+            <div class="bg-emerald-50 p-2.5 rounded-xl border border-emerald-100 space-y-1">
+              <p><i class="fa-solid fa-clock mr-1 text-emerald-600"></i><strong>開放時間：</strong>10:00–18:00（每週一公休）</p>
+              <p><i class="fa-solid fa-star mr-1 text-emerald-600"></i><strong>亮點：</strong>手作陶藝、草木染選物、露天階梯圓形劇場</p>
+              <p><i class="fa-solid fa-location-dot mr-1 text-emerald-600"></i><strong>位置：</strong>素帖山腳下（近悟孟寺 Wat Umong）</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-cardbg rounded-2xl overflow-hidden shadow-sm border border-terra-100">
+          <div class="bg-emerald-700 text-white px-4 py-3 flex items-center space-x-2">
             <i class="fa-solid fa-store text-lg"></i>
             <div><h3 class="font-bold text-sm">真心市集</h3><p class="text-[10px] text-emerald-200 font-outfit">Talat Warorot / Kad Luang</p></div>
             <a href="https://www.google.com/maps/search/?api=1&query=18.8062295,98.995325" target="_blank" class="ml-auto text-emerald-200 hover:text-white"><i class="fa-solid fa-map-pin"></i></a>
@@ -273,6 +292,22 @@
 
       <!-- 夜市 -->
       <div id="guide-night" class="guide-category hidden space-y-3">
+        <div class="bg-cardbg rounded-2xl overflow-hidden shadow-sm border border-terra-100">
+          <div class="bg-indigo-700 text-white px-4 py-3 flex items-center space-x-2">
+            <i class="fa-solid fa-moon text-lg"></i>
+            <div><h3 class="font-bold text-sm">寧曼白色市集</h3><p class="text-[10px] text-indigo-200 font-outfit">White Market Nimman • One Nimman</p></div>
+            <a href="https://www.google.com/maps/search/?api=1&query=18.7997598,98.9674352" target="_blank" class="ml-auto text-indigo-200 hover:text-white"><i class="fa-solid fa-map-pin"></i></a>
+          </div>
+          <div class="p-4 text-xs leading-relaxed space-y-2 text-darktext">
+            <p>位於 One Nimman 商場旁街道的週末白色文創市集，以日系清新風格的白色帳篷著稱。匯聚清邁原創飾品、手作皮革、刺繡小物、插畫周邊與質感街頭美食，氛圍時髦且逛起來非常舒適。</p>
+            <div class="bg-indigo-50 p-2.5 rounded-xl border border-indigo-100 space-y-1">
+              <p><i class="fa-solid fa-calendar mr-1 text-indigo-600"></i><strong>時間：</strong>每週五至週日 15:00–22:00</p>
+              <p><i class="fa-solid fa-star mr-1 text-indigo-600"></i><strong>特色：</strong>文創手作、原創服飾飾品、文青露天美食小吃</p>
+              <p><i class="fa-solid fa-location-dot mr-1 text-indigo-600"></i><strong>位置：</strong>One Nimman 旁行人街道</p>
+            </div>
+          </div>
+        </div>
+
         <div class="bg-cardbg rounded-2xl overflow-hidden shadow-sm border border-terra-100">
           <div class="bg-indigo-700 text-white px-4 py-3 flex items-center space-x-2">
             <i class="fa-solid fa-moon text-lg"></i>
@@ -437,19 +472,20 @@
         <div class="space-y-2 text-xs">
           <div class="flex space-x-2">
             <input type="date" id="expense-date" class="flex-1 p-2.5 bg-warmbg border border-terra-200 rounded-xl focus:outline-none focus:border-terra-500 font-outfit text-darktext">
-            <select id="expense-payer" class="flex-1 p-2.5 bg-warmbg border border-terra-200 rounded-xl focus:outline-none focus:border-terra-500 text-darktext">
-              <option value="">付款人...</option>
+            <select id="expense-payer" class="flex-1 p-2.5 bg-warmbg border border-terra-200 rounded-xl focus:outline-none focus:border-terra-500 text-darktext font-medium">
+              <option value="">選擇付款人...</option>
+              <option value="公費">🏛️ 公費 (公款)</option>
               <option value="CHOE">CHOE</option>
               <option value="CHIU">CHIU</option>
               <option value="芓彤">芓彤</option>
               <option value="雅筠">雅筠</option>
             </select>
           </div>
-          <input type="text" id="expense-title" placeholder="品項名稱 (例如：週日夜市小吃)"
+          <input type="text" id="expense-title" placeholder="品項名稱 (例如：週日夜市小吃、雙條車)"
             class="w-full p-2.5 bg-warmbg border border-terra-200 rounded-xl focus:outline-none focus:border-terra-500">
           <div class="flex space-x-2">
             <input type="number" id="expense-amount" placeholder="泰銖金額 (THB)"
-              class="w-full p-2.5 bg-warmbg border border-terra-200 rounded-xl focus:outline-none focus:border-terra-500 font-outfit">
+              class="w-full p-2.5 bg-warmbg border border-terra-200 rounded-xl focus:outline-none focus:border-terra-500 font-outfit font-bold">
             <label
               class="cursor-pointer bg-terra-100 text-terra-700 px-3 py-2.5 rounded-xl border border-terra-200 flex items-center justify-center shrink-0 font-bold active:scale-95">
               <i class="fa-solid fa-camera mr-1"></i>照片
@@ -457,12 +493,35 @@
             </label>
           </div>
           <div class="bg-warmbg border border-terra-200 rounded-xl p-2.5">
-            <p class="text-gray-500 mb-1.5 font-bold"><i class="fa-solid fa-users mr-1 text-terra-500"></i>分攤人員</p>
-            <div class="flex flex-wrap gap-2">
-              <label class="flex items-center space-x-1 cursor-pointer"><input type="checkbox" value="CHOE" class="split-cb accent-terra-500"><span>CHOE</span></label>
-              <label class="flex items-center space-x-1 cursor-pointer"><input type="checkbox" value="CHIU" class="split-cb accent-terra-500"><span>CHIU</span></label>
-              <label class="flex items-center space-x-1 cursor-pointer"><input type="checkbox" value="芓彤" class="split-cb accent-terra-500"><span>芓彤</span></label>
-              <label class="flex items-center space-x-1 cursor-pointer"><input type="checkbox" value="雅筠" class="split-cb accent-terra-500"><span>雅筠</span></label>
+            <div class="flex justify-between items-center mb-2">
+              <p class="text-gray-600 font-bold text-[11px]"><i class="fa-solid fa-users mr-1 text-terra-500"></i>分攤成員</p>
+              <div class="flex space-x-2">
+                <button type="button" onclick="setSplitPreset('all4')" class="text-[10px] text-terra-600 font-bold underline">全體4人</button>
+                <button type="button" onclick="setSplitPreset('public')" class="text-[10px] text-terra-600 font-bold underline">公費</button>
+                <button type="button" onclick="setSplitPreset('clear')" class="text-[10px] text-gray-400 underline">清除</button>
+              </div>
+            </div>
+            <div class="grid grid-cols-3 gap-1.5 text-center">
+              <label class="flex items-center justify-center space-x-1 p-1.5 bg-terra-50 border border-terra-200 rounded-lg cursor-pointer">
+                <input type="checkbox" value="公費" class="split-cb accent-terra-500">
+                <span class="font-bold text-terra-700 text-[11px]">公費</span>
+              </label>
+              <label class="flex items-center justify-center space-x-1 p-1.5 bg-white border border-terra-100 rounded-lg cursor-pointer">
+                <input type="checkbox" value="CHOE" class="split-cb accent-terra-500">
+                <span class="text-darktext text-[11px]">CHOE</span>
+              </label>
+              <label class="flex items-center justify-center space-x-1 p-1.5 bg-white border border-terra-100 rounded-lg cursor-pointer">
+                <input type="checkbox" value="CHIU" class="split-cb accent-terra-500">
+                <span class="text-darktext text-[11px]">CHIU</span>
+              </label>
+              <label class="flex items-center justify-center space-x-1 p-1.5 bg-white border border-terra-100 rounded-lg cursor-pointer">
+                <input type="checkbox" value="芓彤" class="split-cb accent-terra-500">
+                <span class="text-darktext text-[11px]">芓彤</span>
+              </label>
+              <label class="flex items-center justify-center space-x-1 p-1.5 bg-white border border-terra-100 rounded-lg cursor-pointer">
+                <input type="checkbox" value="雅筠" class="split-cb accent-terra-500">
+                <span class="text-darktext text-[11px]">雅筠</span>
+              </label>
             </div>
           </div>
           <div id="photo-preview-container" class="hidden relative inline-block">
@@ -478,11 +537,16 @@
 
       <div class="bg-cardbg rounded-2xl p-4 shadow-sm border border-terra-100 space-y-3">
         <div class="flex justify-between items-center border-b border-gray-100 pb-2">
-          <h2 class="font-bold text-sm text-darktext"><i class="fa-solid fa-list-check text-terra-500 mr-1.5"></i>消費歷史
-          </h2>
-          <span class="text-xs font-outfit text-terra-600 font-bold">總計: <span id="total-thb">0</span> THB</span>
+          <div>
+            <h2 class="font-bold text-sm text-darktext"><i class="fa-solid fa-list-check text-terra-500 mr-1.5"></i>消費歷史與結算</h2>
+            <p class="text-[10px] text-gray-500 font-outfit">依日期分組 · 當日找補結算明細</p>
+          </div>
+          <div class="text-right">
+            <span class="text-xs font-outfit text-terra-600 font-bold block">總計: <span id="total-thb">0</span> THB</span>
+            <span class="text-[10px] text-gray-500 font-outfit">≈ TWD <span id="total-twd">0</span></span>
+          </div>
         </div>
-        <div id="expense-list" class="space-y-2">
+        <div id="expense-list" class="space-y-4">
         </div>
       </div>
 
@@ -620,7 +684,8 @@
   </main>
 
   <nav
-    class="fixed bottom-0 left-0 right-0 bg-cardbg/95 backdrop-blur-md border-t border-terra-200 z-50 py-2 shadow-lg">
+    class="fixed bottom-0 left-0 right-0 bg-cardbg/95 backdrop-blur-md border-t border-terra-200 z-50 py-2 shadow-lg"
+    style="padding-bottom: calc(0.5rem + env(safe-area-inset-bottom, 0px));">
     <div class="max-w-md mx-auto flex justify-around items-center">
       <button onclick="switchTab('plan')" id="nav-plan" class="nav-btn flex flex-col items-center text-terra-500">
         <i class="fa-solid fa-calendar-days text-base"></i>
@@ -645,13 +710,43 @@
     </div>
   </nav>
 
+  <!-- 照片放大檢視 Modal -->
+  <div id="image-modal" class="fixed inset-0 z-50 bg-black/80 hidden items-center justify-center p-4 backdrop-blur-sm" onclick="closeImageModal()">
+    <div class="relative max-w-sm max-h-[85vh] overflow-hidden rounded-2xl bg-white p-2 shadow-2xl" onclick="event.stopPropagation()">
+      <button onclick="closeImageModal()" class="absolute top-3 right-3 bg-black/60 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm z-10">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <img id="modal-img" src="" class="max-h-[75vh] w-auto max-w-full rounded-xl object-contain mx-auto">
+      <p id="modal-caption" class="text-center text-xs font-bold text-darktext mt-2"></p>
+    </div>
+  </div>
+
   <script>
+    // --- STORAGE HELPERS (iOS Koder / WebView Safe) ---
+    function safeGetStorage(key, defaultVal) {
+      try {
+        const val = localStorage.getItem(key);
+        return val !== null ? JSON.parse(val) : defaultVal;
+      } catch (e) {
+        console.warn('Storage read failed for key ' + key, e);
+        return defaultVal;
+      }
+    }
+
+    function safeSetStorage(key, val) {
+      try {
+        localStorage.setItem(key, typeof val === 'string' ? val : JSON.stringify(val));
+      } catch (e) {
+        console.warn('Storage write failed for key ' + key, e);
+      }
+    }
+
     // --- SCHEDULE DATA ---
     const rawSchedules = [
       {
         dateStr: '09/12', week: '六',
         bf: '自理', lunch: '飛機餐', dinner: '夜市',
-        note: '◎抵達機場後叫車先去Checkin, 再去換匯所換錢',
+        note: '◎抵達機場後叫車先去Checkin, 再去換匯所換錢\n◎叫車提醒 4人+行李箱→「Van（大廂型車）」、4人+戰利品→「SUV / XL」',
         items: [
           { time: '08:31', text: '火車(CHOE)', noMap: true },
           { time: '09:24', text: '高鐵(彰化)', noMap: true },
@@ -699,7 +794,7 @@
         items: [
           { time: '07:30', text: '出發體驗', noMap: true },
           { time: '09:00', text: '黏黏瀑布', coords: '19.0694446,99.079073' },
-          { time: '10:30', text: 'Elely Cafe', coords: '19.0680000,99.0760000' },
+          { time: '10:30', text: 'Elely Cafe', mapUrl: 'https://www.google.com/maps/place/Elely+Cafe%E2%80%99/@19.0687212,98.9448408,15.25z/data=!4m6!3m5!1s0x30da1183cdbeecad:0x81995d9d9e57b49!8m2!3d19.0688143!4d98.9410448!16s%2Fg%2F11mvnkh_wc?entry=ttu&g_ep=EgoyMDI2MDkwMi4wIKXMDSoASAFQAw%3D%3D' },
           { time: '14:00', text: 'Baan Orjao 泰服體驗', coords: '18.7854374,98.9907063' },
           { time: '18:00', text: '羅摩利寺 / 白象夜市', coords: '18.7960243,98.9825675' }
         ]
@@ -764,9 +859,13 @@
         el.classList.add('text-gray-400');
       });
 
-      document.getElementById(`tab-${tabId}`).classList.remove('hidden');
-      document.getElementById(`nav-${tabId}`).classList.remove('text-gray-400');
-      document.getElementById(`nav-${tabId}`).classList.add('text-terra-500');
+      const targetTab = document.getElementById(`tab-${tabId}`);
+      if (targetTab) targetTab.classList.remove('hidden');
+      const targetNav = document.getElementById(`nav-${tabId}`);
+      if (targetNav) {
+        targetNav.classList.remove('text-gray-400');
+        targetNav.classList.add('text-terra-500');
+      }
     }
 
     // --- HELPER: RENDER TEXT WITH LINKS ---
@@ -781,6 +880,7 @@
     // --- RENDER SCHEDULE ---
     function initScheduleNav() {
       const btnContainer = document.getElementById('date-buttons');
+      if (!btnContainer) return;
       btnContainer.innerHTML = '';
 
       rawSchedules.forEach((sch, idx) => {
@@ -801,20 +901,23 @@
 
     function renderScheduleContent() {
       const container = document.getElementById('daily-schedule-container');
+      if (!container) return;
       const data = rawSchedules[activeDateIdx];
 
       const userMemoKey = `daily_memo_${activeDateIdx}`;
-      const savedUserMemo = localStorage.getItem(userMemoKey) || '';
+      const savedUserMemo = safeGetStorage(userMemoKey, '');
 
       let itemsHtml = data.items.map(item => {
         let mapsBtn = '';
         if (!item.noMap) {
-          const mapsUrl = item.coords
-            ? `https://www.google.com/maps/search/?api=1&query=${item.coords}`
-            : `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(item.text.replace(/【.*?】/g, ''))}`;
+          const mapsUrl = item.mapUrl
+            ? item.mapUrl
+            : (item.coords
+              ? `https://www.google.com/maps/search/?api=1&query=${item.coords}`
+              : `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(item.text.replace(/【.*?】/g, ''))}`);
           mapsBtn = `
-            <a href="${mapsUrl}" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-terra-500 text-xs shrink-0 pt-0.5" title="Google Maps">
-              <i class="fa-solid fa-map-pin"></i>
+            <a href="${mapsUrl}" target="_blank" rel="noopener noreferrer" class="text-terra-500 hover:text-terra-700 text-xs shrink-0 pt-0.5" title="開啟 Google Maps">
+              <i class="fa-solid fa-map-pin text-sm"></i>
             </a>
           `;
         }
@@ -854,7 +957,7 @@
           ${data.note ? `
             <div class="bg-warmbg p-2.5 rounded-xl border border-terra-200/60 text-xs text-gray-600">
               <div class="font-bold text-terra-600 mb-1"><i class="fa-solid fa-circle-info mr-1"></i>備註資訊：</div>
-              <div class="whitespace-pre-line leading-relaxed">${data.note}</div>
+              <div class="whitespace-pre-line leading-relaxed font-sans">${data.note}</div>
             </div>
           ` : ''}
 
@@ -862,7 +965,7 @@
             <label class="font-bold text-xs text-darktext block"><i class="fa-solid fa-pen-to-square text-terra-500 mr-1"></i>當日行程個人備忘</label>
             <textarea id="daily-memo-input" rows="2" placeholder="記下車票號碼、集合細節或私人網址..." class="w-full p-2 bg-warmbg border border-terra-200 rounded-xl text-xs focus:outline-none focus:border-terra-500">${savedUserMemo}</textarea>
             <div class="flex justify-between items-center">
-              <button onclick="saveDailyMemo(${activeDateIdx})" class="px-3 py-1 bg-terra-500 text-white text-xs font-bold rounded-lg shadow">儲存當日備忘</button>
+              <button onclick="saveDailyMemo(${activeDateIdx})" class="px-3 py-1 bg-terra-500 text-white text-xs font-bold rounded-lg shadow active:scale-95 transition">儲存當日備忘</button>
             </div>
             <div id="daily-memo-display" class="text-xs text-darktext pt-1">
               ${renderTextWithLinks(savedUserMemo)}
@@ -873,9 +976,11 @@
     }
 
     function saveDailyMemo(idx) {
-      const val = document.getElementById('daily-memo-input').value;
-      localStorage.setItem(`daily_memo_${idx}`, val);
-      document.getElementById('daily-memo-display').innerHTML = renderTextWithLinks(val);
+      const input = document.getElementById('daily-memo-input');
+      const val = input ? input.value : '';
+      safeSetStorage(`daily_memo_${idx}`, val);
+      const display = document.getElementById('daily-memo-display');
+      if (display) display.innerHTML = renderTextWithLinks(val);
       alert('當日備忘錄已儲存！');
     }
 
@@ -909,21 +1014,36 @@
       const twdEl = document.getElementById('calc-twd');
       const rate = parseFloat(document.getElementById('exchange-rate').value) || 0.92;
 
-      exprEl.innerText = calcExpr;
+      if (exprEl) exprEl.innerText = calcExpr;
       let val = parseFloat(calcExpr) || 0;
-      display.innerText = calcExpr || '0';
-      twdEl.innerText = Math.round(val * rate);
+      if (display) display.innerText = calcExpr || '0';
+      if (twdEl) twdEl.innerText = Math.round(val * rate);
     }
 
     function saveRate() {
       const rate = document.getElementById('exchange-rate').value;
-      localStorage.setItem('cm_exchange_rate', rate);
+      safeSetStorage('cm_exchange_rate', rate);
       updateCalcDisplay();
+      renderExpenses();
     }
 
-    // --- EXPENSE TRACKER ---
-    let expenses = JSON.parse(localStorage.getItem('cm_expenses') || '[]');
+    // --- EXPENSE TRACKER & DAILY SETTLEMENT ---
+    const CORE_MEMBERS = ['CHOE', 'CHIU', '芓彤', '雅筠'];
+    let expenses = safeGetStorage('cm_expenses', []);
     let currentPhotoBase64 = '';
+
+    function setSplitPreset(type) {
+      const cbs = document.querySelectorAll('.split-cb');
+      cbs.forEach(cb => {
+        if (type === 'all4') {
+          cb.checked = (cb.value !== '公費');
+        } else if (type === 'public') {
+          cb.checked = (cb.value === '公費');
+        } else if (type === 'clear') {
+          cb.checked = false;
+        }
+      });
+    }
 
     function handlePhotoSelect(e) {
       const file = e.target.files[0];
@@ -934,7 +1054,7 @@
         const img = new Image();
         img.onload = function () {
           const canvas = document.createElement('canvas');
-          const maxDim = 300;
+          const maxDim = 400;
           let w = img.width;
           let h = img.height;
           if (w > h) {
@@ -946,7 +1066,7 @@
           canvas.height = h;
           const ctx = canvas.getContext('2d');
           ctx.drawImage(img, 0, 0, w, h);
-          currentPhotoBase64 = canvas.toDataURL('image/jpeg', 0.6);
+          currentPhotoBase64 = canvas.toDataURL('image/jpeg', 0.65);
 
           document.getElementById('photo-preview').src = currentPhotoBase64;
           document.getElementById('photo-preview-container').classList.remove('hidden');
@@ -958,21 +1078,62 @@
 
     function clearPhotoPreview() {
       currentPhotoBase64 = '';
-      document.getElementById('photo-preview-container').classList.add('hidden');
-      document.getElementById('expense-photo').value = '';
+      const previewContainer = document.getElementById('photo-preview-container');
+      if (previewContainer) previewContainer.classList.add('hidden');
+      const photoInput = document.getElementById('expense-photo');
+      if (photoInput) photoInput.value = '';
+    }
+
+    function showImageModal(src, title) {
+      const modal = document.getElementById('image-modal');
+      const modalImg = document.getElementById('modal-img');
+      const caption = document.getElementById('modal-caption');
+      if (modal && modalImg) {
+        modalImg.src = src;
+        if (caption) caption.innerText = title || '收據照片';
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+      }
+    }
+
+    function closeImageModal() {
+      const modal = document.getElementById('image-modal');
+      if (modal) {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+      }
     }
 
     function addExpense() {
-      const title = document.getElementById('expense-title').value.trim();
-      const amount = parseFloat(document.getElementById('expense-amount').value);
-      const date = document.getElementById('expense-date').value;
-      const payer = document.getElementById('expense-payer').value;
-      const splitCbs = document.querySelectorAll('.split-cb:checked');
-      const splitWith = Array.from(splitCbs).map(cb => cb.value);
+      const titleInput = document.getElementById('expense-title');
+      const amountInput = document.getElementById('expense-amount');
+      const dateInput = document.getElementById('expense-date');
+      const payerSelect = document.getElementById('expense-payer');
 
-      if (!title || isNaN(amount)) {
-        alert('請填寫有效的品項名稱與金額');
+      const title = titleInput.value.trim();
+      const amount = parseFloat(amountInput.value);
+      const date = dateInput.value;
+      const payer = payerSelect.value;
+      const splitCbs = document.querySelectorAll('.split-cb:checked');
+      let splitWith = Array.from(splitCbs).map(cb => cb.value);
+
+      if (!title || isNaN(amount) || amount <= 0) {
+        alert('請填寫有效的品項名稱與泰銖金額！');
         return;
+      }
+
+      if (!payer) {
+        alert('請選擇付款人（公費 或 個人）！');
+        return;
+      }
+
+      // 若未勾選分攤人，自動依付款人預設
+      if (splitWith.length === 0) {
+        if (payer === '公費') {
+          splitWith = ['公費'];
+        } else {
+          splitWith = [payer];
+        }
       }
 
       const item = {
@@ -986,12 +1147,11 @@
       };
 
       expenses.unshift(item);
-      localStorage.setItem('cm_expenses', JSON.stringify(expenses));
+      safeSetStorage('cm_expenses', expenses);
 
-      document.getElementById('expense-title').value = '';
-      document.getElementById('expense-amount').value = '';
-      document.getElementById('expense-date').value = '';
-      document.getElementById('expense-payer').value = '';
+      titleInput.value = '';
+      amountInput.value = '';
+      payerSelect.value = '';
       document.querySelectorAll('.split-cb').forEach(cb => cb.checked = false);
       clearPhotoPreview();
 
@@ -999,54 +1159,201 @@
     }
 
     function deleteExpense(id) {
-      expenses = expenses.filter(e => e.id !== id);
-      localStorage.setItem('cm_expenses', JSON.stringify(expenses));
-      renderExpenses();
+      if (confirm('確定要刪除這筆記帳紀錄嗎？')) {
+        expenses = expenses.filter(e => e.id !== id);
+        safeSetStorage('cm_expenses', expenses);
+        renderExpenses();
+      }
     }
 
     function renderExpenses() {
       const list = document.getElementById('expense-list');
+      const totalThbEl = document.getElementById('total-thb');
+      const totalTwdEl = document.getElementById('total-twd');
       const rate = parseFloat(document.getElementById('exchange-rate').value) || 0.92;
+      if (!list) return;
       list.innerHTML = '';
 
       let totalTHB = 0;
 
       if (expenses.length === 0) {
-        list.innerHTML = `<p class="text-xs text-gray-400 text-center py-4">尚無記帳紀錄</p>`;
-      }
-
-      expenses.forEach(item => {
-        totalTHB += item.amount;
-        const twd = Math.round(item.amount * rate);
-        const splitCount = item.splitWith && item.splitWith.length > 0 ? item.splitWith.length : 1;
-        const perPerson = Math.round((item.amount / splitCount) * rate);
-
-        const div = document.createElement('div');
-        div.className = 'bg-warmbg p-2.5 rounded-xl border border-terra-100 text-xs space-y-1.5';
-        div.innerHTML = `
-          <div class="flex items-start justify-between">
-            <div class="flex items-center space-x-2.5">
-              ${item.photo ? `<img src="${item.photo}" class="w-10 h-10 object-cover rounded-lg border border-terra-200 shrink-0">` : '<div class="w-10 h-10 bg-terra-50 rounded-lg flex items-center justify-center text-terra-400 shrink-0"><i class="fa-solid fa-receipt"></i></div>'}
-              <div>
-                ${item.date ? `<p class="text-[10px] text-gray-400 font-outfit">${item.date}</p>` : ''}
-                <p class="font-bold text-darktext">${item.title}</p>
-                <p class="text-[10px] text-gray-500 font-outfit">≈ TWD ${twd}</p>
-              </div>
-            </div>
-            <div class="flex items-center space-x-2 shrink-0">
-              <span class="font-bold font-outfit text-terra-600">${item.amount} THB</span>
-              <button onclick="deleteExpense(${item.id})" class="text-gray-300 hover:text-red-500 p-1"><i class="fa-solid fa-trash"></i></button>
-            </div>
-          </div>
-          <div class="flex flex-wrap gap-1 pt-0.5">
-            ${item.payer ? `<span class="bg-terra-100 text-terra-700 px-1.5 py-0.5 rounded font-bold"><i class="fa-solid fa-credit-card mr-1"></i>${item.payer} 付</span>` : ''}
-            ${item.splitWith && item.splitWith.length > 0 ? `<span class="bg-warmbg border border-terra-200 text-gray-600 px-1.5 py-0.5 rounded"><i class="fa-solid fa-users mr-1"></i>分攤：${item.splitWith.join('、')}（各約TWD ${perPerson}）</span>` : ''}
+        list.innerHTML = `
+          <div class="text-center py-6 text-gray-400 text-xs">
+            <i class="fa-solid fa-receipt text-2xl mb-2 text-terra-200"></i>
+            <p>尚未有任何記帳紀錄</p>
+            <p class="text-[10px] text-gray-400 mt-1">在上方輸入金額即可開始記帳與自動算找補！</p>
           </div>
         `;
-        list.appendChild(div);
+        if (totalThbEl) totalThbEl.innerText = '0';
+        if (totalTwdEl) totalTwdEl.innerText = '0';
+        return;
+      }
+
+      // Group expenses by Date
+      const dateGroups = {};
+      expenses.forEach(item => {
+        totalTHB += item.amount;
+        const dKey = item.date || '未指定日期';
+        if (!dateGroups[dKey]) {
+          dateGroups[dKey] = [];
+        }
+        dateGroups[dKey].push(item);
       });
 
-      document.getElementById('total-thb').innerText = totalTHB;
+      // Sort dates descending
+      const sortedDates = Object.keys(dateGroups).sort((a, b) => {
+        if (a === '未指定日期') return 1;
+        if (b === '未指定日期') return -1;
+        return b.localeCompare(a);
+      });
+
+      sortedDates.forEach(dKey => {
+        const groupItems = dateGroups[dKey];
+        let dayTotalTHB = 0;
+        let publicPaidTHB = 0;
+        let publicOwedTHB = 0;
+
+        // 計算各成員當日墊付與應分攤
+        const memberStats = {};
+        CORE_MEMBERS.forEach(m => {
+          memberStats[m] = { paid: 0, owed: 0, net: 0 };
+        });
+
+        groupItems.forEach(item => {
+          dayTotalTHB += item.amount;
+
+          // Payer accounting
+          if (item.payer === '公費') {
+            publicPaidTHB += item.amount;
+          } else if (memberStats[item.payer]) {
+            memberStats[item.payer].paid += item.amount;
+          }
+
+          // Split accounting
+          const splitList = item.splitWith && item.splitWith.length > 0 ? item.splitWith : [item.payer];
+          const splitAmount = item.amount / splitList.length;
+
+          splitList.forEach(p => {
+            if (p === '公費') {
+              publicOwedTHB += splitAmount;
+            } else if (memberStats[p]) {
+              memberStats[p].owed += splitAmount;
+            }
+          });
+        });
+
+        // Compute net for each member
+        CORE_MEMBERS.forEach(m => {
+          memberStats[m].net = memberStats[m].paid - memberStats[m].owed;
+        });
+
+        const dayTotalTWD = Math.round(dayTotalTHB * rate);
+        const publicPaidTWD = Math.round(publicPaidTHB * rate);
+
+        // Date container card
+        const groupCard = document.createElement('div');
+        groupCard.className = 'bg-warmbg rounded-2xl p-3.5 border border-terra-200/80 shadow-sm space-y-3';
+
+        // Header & Daily Settlement Summary
+        let settlementRows = CORE_MEMBERS.map(m => {
+          const stat = memberStats[m];
+          const net = Math.round(stat.net);
+          const netTWD = Math.round(stat.net * rate);
+
+          let balanceBadge = '';
+          if (net > 0) {
+            balanceBadge = `<span class="bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded-full font-bold text-[10px]">應收回 +${net} THB (≈ TWD ${netTWD})</span>`;
+          } else if (net < 0) {
+            balanceBadge = `<span class="bg-rose-100 text-rose-800 px-2 py-0.5 rounded-full font-bold text-[10px]">應補繳 -${Math.abs(net)} THB (≈ TWD ${Math.abs(netTWD)})</span>`;
+          } else {
+            balanceBadge = `<span class="bg-gray-100 text-gray-600 px-2 py-0.5 rounded-full text-[10px]">${stat.paid > 0 ? '已結平' : '無差額'}</span>`;
+          }
+
+          return `
+            <div class="flex items-center justify-between py-1 text-xs border-b border-gray-100/70 last:border-b-0">
+              <span class="font-bold text-darktext">${m}</span>
+              <div class="flex items-center space-x-2">
+                <span class="text-[10px] text-gray-500 font-outfit">付 ${Math.round(stat.paid)} / 攤 ${Math.round(stat.owed)}</span>
+                ${balanceBadge}
+              </div>
+            </div>
+          `;
+        }).join('');
+
+        // Render Item rows in this group
+        let itemsHtml = groupItems.map(item => {
+          const itemTwd = Math.round(item.amount * rate);
+          const splitCount = item.splitWith && item.splitWith.length > 0 ? item.splitWith.length : 1;
+          const perPerson = Math.round((item.amount / splitCount) * rate);
+          const isPublicPayer = item.payer === '公費';
+
+          return `
+            <div class="bg-white p-2.5 rounded-xl border border-terra-100 text-xs space-y-1.5 shadow-sm">
+              <div class="flex items-start justify-between">
+                <div class="flex items-center space-x-2.5 flex-grow">
+                  ${item.photo
+                    ? `<img src="${item.photo}" onclick="showImageModal('${item.photo}', '${item.title.replace(/'/g, "\\'")}')" class="w-10 h-10 object-cover rounded-lg border border-terra-200 shrink-0 cursor-pointer active:scale-95" title="點擊放大檢視">`
+                    : `<div class="w-10 h-10 ${isPublicPayer ? 'bg-amber-50 text-amber-600' : 'bg-terra-50 text-terra-500'} rounded-lg flex items-center justify-center shrink-0"><i class="fa-solid ${isPublicPayer ? 'fa-building-columns' : 'fa-receipt'}"></i></div>`
+                  }
+                  <div class="flex-grow">
+                    <p class="font-bold text-darktext leading-tight">${item.title}</p>
+                    <p class="text-[10px] text-gray-500 font-outfit mt-0.5">≈ TWD ${itemTwd}</p>
+                  </div>
+                </div>
+                <div class="flex items-center space-x-2 shrink-0 ml-2">
+                  <span class="font-bold font-outfit text-terra-600">${item.amount} THB</span>
+                  <button onclick="deleteExpense(${item.id})" class="text-gray-300 hover:text-red-500 p-1 active:scale-90" title="刪除"><i class="fa-solid fa-trash-can"></i></button>
+                </div>
+              </div>
+              <div class="flex flex-wrap items-center gap-1 pt-0.5">
+                ${isPublicPayer
+                  ? `<span class="bg-amber-100 text-amber-800 px-1.5 py-0.5 rounded font-bold text-[10px]"><i class="fa-solid fa-building-columns mr-1"></i>公費支出</span>`
+                  : (item.payer ? `<span class="bg-terra-100 text-terra-700 px-1.5 py-0.5 rounded font-bold text-[10px]"><i class="fa-solid fa-credit-card mr-1"></i>${item.payer} 付款</span>` : '')
+                }
+                ${item.splitWith && item.splitWith.length > 0
+                  ? `<span class="bg-warmbg border border-terra-200/80 text-gray-600 px-1.5 py-0.5 rounded text-[10px]"><i class="fa-solid fa-users mr-1"></i>分攤: ${item.splitWith.join('、')} (${splitCount > 1 ? '各約TWD ' + perPerson : '全額'})</span>`
+                  : ''
+                }
+              </div>
+            </div>
+          `;
+        }).join('');
+
+        groupCard.innerHTML = `
+          <div class="flex justify-between items-center border-b border-terra-200/80 pb-2">
+            <div class="flex items-center space-x-1.5">
+              <i class="fa-solid fa-calendar-day text-terra-500"></i>
+              <span class="font-bold text-xs text-darktext font-outfit">${dKey}</span>
+              <span class="text-[10px] text-gray-400">(${groupItems.length} 筆)</span>
+            </div>
+            <div class="text-right">
+              <span class="font-bold font-outfit text-xs text-terra-700">當日小計: ${dayTotalTHB} THB</span>
+              <span class="text-[10px] text-gray-500 font-outfit block">≈ TWD ${dayTotalTWD}</span>
+            </div>
+          </div>
+
+          <!-- 當日結算卡片 -->
+          <div class="bg-terra-50/70 p-2.5 rounded-xl border border-terra-200/60 space-y-1.5">
+            <div class="flex justify-between items-center text-xs font-bold text-terra-800 border-b border-terra-200/50 pb-1">
+              <span><i class="fa-solid fa-scale-balanced mr-1 text-terra-600"></i>當日結算與找補明細</span>
+              ${publicPaidTHB > 0 ? `<span class="text-[10px] bg-amber-100 text-amber-900 px-1.5 py-0.5 rounded">公費支: ${publicPaidTHB} THB (≈ TWD ${publicPaidTWD})</span>` : ''}
+            </div>
+            <div class="space-y-1">
+              ${settlementRows}
+            </div>
+          </div>
+
+          <!-- 當日消費明細 -->
+          <div class="space-y-2">
+            ${itemsHtml}
+          </div>
+        `;
+
+        list.appendChild(groupCard);
+      });
+
+      if (totalThbEl) totalThbEl.innerText = totalTHB;
+      if (totalTwdEl) totalTwdEl.innerText = Math.round(totalTHB * rate);
     }
 
     // --- CHECKLIST & MEMOS ---
@@ -1058,11 +1365,12 @@
     ];
     const packItems = ['護照', '藥品', '維他命', '防曬乳', '信用卡', '外幣', '行動電源', '相機', '記憶卡', '充電線', '手持電風扇', '雨傘', '收納袋', '壓縮袋', '枕頭', '指甲剪', '盥洗用品(牙刷牙膏)', '拖鞋/涼鞋', '眼罩'];
 
-    let checkState = JSON.parse(localStorage.getItem('cm_checklist') || '{}');
+    let checkState = safeGetStorage('cm_checklist', {});
 
     function initChecklist() {
       const prepContainer = document.getElementById('checklist-prep');
       const itemsContainer = document.getElementById('checklist-items');
+      if (!prepContainer || !itemsContainer) return;
 
       prepContainer.innerHTML = prepItems.map((item, idx) => {
         const key = `prep_${idx}`;
@@ -1094,35 +1402,37 @@
 
     function toggleCheck(key) {
       checkState[key] = !checkState[key];
-      localStorage.setItem('cm_checklist', JSON.stringify(checkState));
+      safeSetStorage('cm_checklist', checkState);
     }
 
     // Personal Memos
-    let personalMemos = JSON.parse(localStorage.getItem('cm_personal_memos') || '[]');
+    let personalMemos = safeGetStorage('cm_personal_memos', []);
 
     function saveMemo() {
       const input = document.getElementById('memo-input');
+      if (!input) return;
       const val = input.value.trim();
       if (!val) return;
 
       personalMemos.unshift({ id: Date.now(), text: val });
-      localStorage.setItem('cm_personal_memos', JSON.stringify(personalMemos));
+      safeSetStorage('cm_personal_memos', personalMemos);
       input.value = '';
       renderPersonalMemos();
     }
 
     function deleteMemo(id) {
       personalMemos = personalMemos.filter(m => m.id !== id);
-      localStorage.setItem('cm_personal_memos', JSON.stringify(personalMemos));
+      safeSetStorage('cm_personal_memos', personalMemos);
       renderPersonalMemos();
     }
 
     function renderPersonalMemos() {
       const list = document.getElementById('memo-display-list');
+      if (!list) return;
       list.innerHTML = '';
 
       if (personalMemos.length === 0) {
-        list.innerHTML = `<p class="text-xs text-gray-400 text-center">尚未新增任何備忘錄</p>`;
+        list.innerHTML = `<p class="text-xs text-gray-400 text-center py-2">尚未新增任何備忘錄</p>`;
         return;
       }
 
@@ -1134,7 +1444,7 @@
             <p class="whitespace-pre-line text-darktext">${m.text}</p>
             <div>${renderTextWithLinks(m.text)}</div>
           </div>
-          <button onclick="deleteMemo(${m.id})" class="text-gray-300 hover:text-red-500 shrink-0"><i class="fa-solid fa-xmark"></i></button>
+          <button onclick="deleteMemo(${m.id})" class="text-gray-300 hover:text-red-500 shrink-0 p-1"><i class="fa-solid fa-xmark"></i></button>
         `;
         list.appendChild(div);
       });
@@ -1147,17 +1457,27 @@
         btn.classList.remove('bg-terra-500', 'text-white', 'shadow-sm');
         btn.classList.add('bg-cardbg', 'text-gray-600', 'border', 'border-terra-100');
       });
-      document.getElementById(`guide-${cat}`).classList.remove('hidden');
+      const catEl = document.getElementById(`guide-${cat}`);
+      if (catEl) catEl.classList.remove('hidden');
       const activeBtn = document.getElementById(`gtab-${cat}`);
-      activeBtn.classList.add('bg-terra-500', 'text-white', 'shadow-sm');
-      activeBtn.classList.remove('bg-cardbg', 'text-gray-600', 'border', 'border-terra-100');
+      if (activeBtn) {
+        activeBtn.classList.add('bg-terra-500', 'text-white', 'shadow-sm');
+        activeBtn.classList.remove('bg-cardbg', 'text-gray-600', 'border', 'border-terra-100');
+      }
     }
 
     // --- INITIALIZATION ---
     window.onload = function () {
-      const savedRate = localStorage.getItem('cm_exchange_rate');
-      if (savedRate) {
+      const savedRate = safeGetStorage('cm_exchange_rate', '0.92');
+      if (savedRate && document.getElementById('exchange-rate')) {
         document.getElementById('exchange-rate').value = savedRate;
+      }
+
+      // Default date picker to today's date or 2026-09-12 if appropriate
+      const dateInput = document.getElementById('expense-date');
+      if (dateInput && !dateInput.value) {
+        const today = new Date().toISOString().split('T')[0];
+        dateInput.value = today;
       }
 
       initScheduleNav();
